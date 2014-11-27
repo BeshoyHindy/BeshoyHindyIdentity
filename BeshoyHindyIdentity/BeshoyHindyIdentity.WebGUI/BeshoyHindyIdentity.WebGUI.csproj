@@ -1,0 +1,1476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F07B0170-0AAB-4629-AD0B-264DBAC14104}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebGUI</RootNamespace>
+    <AssemblyName>BeshoyHindyIdentity.WebGUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminPanale\Accounts\LogIn.aspx" />
+    <Content Include="AdminPanale\assets\css\style.css.map" />
+    <Content Include="AdminPanale\assets\fonts\A Real Treasureland!.url" />
+    <Content Include="AdminPanale\assets\fonts\AfterEffect Fresh Sources!.url" />
+    <Content Include="AdminPanale\assets\fonts\custom-set.eot" />
+    <Content Include="AdminPanale\assets\fonts\custom-set.ttf" />
+    <Content Include="AdminPanale\assets\fonts\custom-set.woff" />
+    <Content Include="AdminPanale\assets\fonts\EXTRA CREATIVITY!.url" />
+    <Content Include="AdminPanale\assets\fonts\HeroTurko.NET.url" />
+    <Content Include="AdminPanale\assets\fonts\Newest Tutorials!.url" />
+    <Content Include="AdminPanale\assets\less\mixins.less" />
+    <Content Include="AdminPanale\assets\less\modules.less" />
+    <Content Include="AdminPanale\assets\less\modules\buttons.less" />
+    <Content Include="AdminPanale\assets\less\modules\charts.less" />
+    <Content Include="AdminPanale\assets\less\modules\datatable.less" />
+    <Content Include="AdminPanale\assets\less\modules\demo.less" />
+    <Content Include="AdminPanale\assets\less\modules\direction.less" />
+    <Content Include="AdminPanale\assets\less\modules\error_page.less" />
+    <Content Include="AdminPanale\assets\less\modules\form_elements.less" />
+    <Content Include="AdminPanale\assets\less\modules\layout.less" />
+    <Content Include="AdminPanale\assets\less\modules\message_notifications.less" />
+    <Content Include="AdminPanale\assets\less\modules\misc.less" />
+    <Content Include="AdminPanale\assets\less\modules\plugin.less" />
+    <Content Include="AdminPanale\assets\less\modules\portlets.less" />
+    <Content Include="AdminPanale\assets\less\modules\rtl.less" />
+    <Content Include="AdminPanale\assets\less\modules\search_results.less" />
+    <Content Include="AdminPanale\assets\less\modules\slider.less" />
+    <Content Include="AdminPanale\assets\less\modules\tables.less" />
+    <Content Include="AdminPanale\assets\less\modules\tabs_accordians.less" />
+    <Content Include="AdminPanale\assets\less\modules\tiles.less" />
+    <Content Include="AdminPanale\assets\less\modules\timeline.less" />
+    <Content Include="AdminPanale\assets\less\modules\typo.less" />
+    <Content Include="AdminPanale\assets\less\modules\user_profile.less" />
+    <Content Include="AdminPanale\assets\less\modules\vector_maps.less" />
+    <Content Include="AdminPanale\assets\less\responsive.less" />
+    <Content Include="AdminPanale\assets\less\style.less" />
+    <Content Include="AdminPanale\assets\less\themes\coporate\theme.less" />
+    <Content Include="AdminPanale\assets\less\themes\coporate\var.less" />
+    <Content Include="AdminPanale\assets\less\themes\default\theme.less" />
+    <Content Include="AdminPanale\assets\less\themes\default\var.less" />
+    <Content Include="AdminPanale\assets\less\themes\elegant\theme.less" />
+    <Content Include="AdminPanale\assets\less\themes\elegant\var.less" />
+    <Content Include="AdminPanale\assets\less\themes\simple\theme.less" />
+    <Content Include="AdminPanale\assets\less\themes\simple\var.less" />
+    <Content Include="AdminPanale\assets\plugins\boostrapv3\css\bootstrap-theme.css.map" />
+    <Content Include="AdminPanale\assets\plugins\boostrapv3\css\bootstrap.css.map" />
+    <Content Include="AdminPanale\assets\plugins\boostrapv3\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="AdminPanale\assets\plugins\boostrapv3\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="AdminPanale\assets\plugins\boostrapv3\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\bower.json" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\LICENSE" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\README.md" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\release.sh" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2.jquery.json" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_en.js.template" />
+    <Content Include="AdminPanale\assets\plugins\dropzone\css\stylus\basic.styl" />
+    <Content Include="AdminPanale\assets\plugins\dropzone\css\stylus\dropzone.styl" />
+    <Content Include="AdminPanale\assets\plugins\dropzone\images\spritemap%402x.psd" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\less\bordered-pulled.less" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\less\core.less" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\less\fixed-width.less" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\less\font-awesome.less" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\less\icons.less" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\less\larger.less" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\less\list.less" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\less\mixins.less" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\less\path.less" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\less\rotated-flipped.less" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\less\spinning.less" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\less\stacked.less" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\less\variables.less" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\scss\font-awesome.scss" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\scss\_core.scss" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\scss\_icons.scss" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\scss\_larger.scss" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\scss\_list.scss" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\scss\_mixins.scss" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\scss\_path.scss" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\scss\_spinning.scss" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\scss\_stacked.scss" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\scss\_variables.scss" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\as3\lib\AlivePDF.swc" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\as3\ZeroClipboard.as" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\as3\ZeroClipboardPdf.as" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\images\psd\collection.psd" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\images\psd\copy document.psd" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\images\psd\file_types.psd" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\images\psd\printer.psd" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\js\TableTools.min.js.gz" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\images\Sorting icons.psd" />
+    <Content Include="AdminPanale\assets\plugins\planetary\world-110m.json" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\fonts\codropsicons\codropsicons.eot" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\fonts\codropsicons\codropsicons.ttf" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\fonts\codropsicons\codropsicons.woff" />
+    <Content Include="AdminPanale\assets\scss\mixins.scss" />
+    <Content Include="AdminPanale\assets\scss\modules\buttons.scss" />
+    <Content Include="AdminPanale\assets\scss\modules\charts.scss" />
+    <Content Include="AdminPanale\assets\scss\modules\datatable.scss" />
+    <Content Include="AdminPanale\assets\scss\modules\error_page.scss" />
+    <Content Include="AdminPanale\assets\scss\modules\form_elements.scss" />
+    <Content Include="AdminPanale\assets\scss\modules\layout.scss" />
+    <Content Include="AdminPanale\assets\scss\modules\message_notifications.scss" />
+    <Content Include="AdminPanale\assets\scss\modules\misc.scss" />
+    <Content Include="AdminPanale\assets\scss\modules\portlets.scss" />
+    <Content Include="AdminPanale\assets\scss\modules\slider.scss" />
+    <Content Include="AdminPanale\assets\scss\modules\tables.scss" />
+    <Content Include="AdminPanale\assets\scss\modules\tabs_accordians.scss" />
+    <Content Include="AdminPanale\assets\scss\modules\tiles.scss" />
+    <Content Include="AdminPanale\assets\scss\modules\timeline.scss" />
+    <Content Include="AdminPanale\assets\scss\modules\typo.scss" />
+    <Content Include="AdminPanale\assets\scss\modules\user_profile.scss" />
+    <Content Include="AdminPanale\assets\scss\modules\vector_maps.scss" />
+    <Content Include="AdminPanale\assets\scss\responsive.scss" />
+    <Content Include="AdminPanale\assets\scss\style.scss" />
+    <Content Include="AdminPanale\assets\scss\theme.scss" />
+    <Content Include="AdminPanale\assets\scss\variables.scss" />
+    <Content Include="AdminPanale\Default.aspx" />
+    <Content Include="AdminPanale\MainPages\AboutMeList.aspx" />
+    <Content Include="AdminPanale\MainPages\AboutMeMaganagement.aspx" />
+    <Content Include="AdminPanale\MainPages\ClientsList.aspx" />
+    <Content Include="AdminPanale\MainPages\ClientsManagement.aspx" />
+    <Content Include="AdminPanale\MainPages\ContactList.aspx" />
+    <Content Include="AdminPanale\MainPages\ContactManagement.aspx" />
+    <Content Include="AdminPanale\MainPages\EducationList.aspx" />
+    <Content Include="AdminPanale\MainPages\EducationManagement.aspx" />
+    <Content Include="AdminPanale\MainPages\GeneralSkillsList.aspx" />
+    <Content Include="AdminPanale\MainPages\GeneralSkillsManagement.aspx" />
+    <Content Include="AdminPanale\MainPages\ProcessList.aspx" />
+    <Content Include="AdminPanale\MainPages\ProcessManagement.aspx" />
+    <Content Include="AdminPanale\MainPages\ResumeList.aspx" />
+    <Content Include="AdminPanale\MainPages\ResumeManagement.aspx" />
+    <Content Include="AdminPanale\MainPages\SocialLinksList.aspx" />
+    <Content Include="AdminPanale\MainPages\SocialLinksManagement.aspx" />
+    <Content Include="AdminPanale\MainPages\SoftwareSkillsList.aspx" />
+    <Content Include="AdminPanale\MainPages\SoftwareSkillsManagement.aspx" />
+    <Content Include="AdminPanale\MainPages\werksList.aspx" />
+    <Content Include="AdminPanale\MainPages\WorksManagement.aspx" />
+    <Content Include="AdminPanale\MainPages\WorkTypeList.aspx" />
+    <Content Include="AdminPanale\MainPages\WorkTypeManagement.aspx" />
+    <Content Include="AdminPanale\Web.config" />
+    <Content Include="AdminPanale\MasterPages\Web.config" />
+    <Content Include="AdminPanale\MainPages\Web.config" />
+    <Content Include="AdminPanale\assets\Web.config" />
+    <Content Include="AdminPanale\media\Web.config" />
+    <None Include="fonts\fontawesome-webfont.eot_" />
+    <None Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="Default.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <None Include="fonts\fontawesome-webfont.ttf" />
+    <None Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="AdminPanale\Accounts\web.config" />
+    <Content Include="AdminPanale\MasterPages\Home.Master" />
+    <Content Include="AdminPanale\MasterPages\Pages.Master" />
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminPanale\404.html" />
+    <Content Include="AdminPanale\500.html" />
+    <Content Include="AdminPanale\assets\css\animate.min.css" />
+    <Content Include="AdminPanale\assets\css\bootstrap-table-responsive.css" />
+    <Content Include="AdminPanale\assets\css\custom-icon-set.css" />
+    <Content Include="AdminPanale\assets\css\large_screen_tweak.css" />
+    <Content Include="AdminPanale\assets\css\magic_space.css" />
+    <Content Include="AdminPanale\assets\css\print.css" />
+    <Content Include="AdminPanale\assets\css\responsive.css" />
+    <Content Include="AdminPanale\assets\css\rtl\responsive.css" />
+    <Content Include="AdminPanale\assets\css\rtl\style.css" />
+    <Content Include="AdminPanale\assets\css\style.css" />
+    <Content Include="AdminPanale\assets\css\themes\coporate\responsive.css" />
+    <Content Include="AdminPanale\assets\css\themes\coporate\style.css" />
+    <Content Include="AdminPanale\assets\css\themes\default\responsive.css" />
+    <Content Include="AdminPanale\assets\css\themes\default\style.css" />
+    <Content Include="AdminPanale\assets\css\themes\elegant\responsive.css" />
+    <Content Include="AdminPanale\assets\css\themes\elegant\style.css" />
+    <Content Include="AdminPanale\assets\css\themes\simple\responsive.css" />
+    <Content Include="AdminPanale\assets\css\themes\simple\style.css" />
+    <Content Include="AdminPanale\assets\fonts\custom-set.dev.svg" />
+    <Content Include="AdminPanale\assets\fonts\custom-set.svg" />
+    <Content Include="AdminPanale\assets\fonts\MoreThanYouNeed.nfo.txt" />
+    <Content Include="AdminPanale\assets\img\cover_pic.png" />
+    <Content Include="AdminPanale\assets\img\icon\noti-cross-2x.png" />
+    <Content Include="AdminPanale\assets\img\icon\noti-cross.png" />
+    <Content Include="AdminPanale\assets\img\icon\online-2x.png" />
+    <Content Include="AdminPanale\assets\img\icon\online.png" />
+    <Content Include="AdminPanale\assets\img\icon\portlet-tray-2x.png" />
+    <Content Include="AdminPanale\assets\img\icon\portlet-tray.png" />
+    <Content Include="AdminPanale\assets\img\icon\status.png" />
+    <Content Include="AdminPanale\assets\img\icon\status2x.png" />
+    <Content Include="AdminPanale\assets\img\icon\Tick-2x.png" />
+    <Content Include="AdminPanale\assets\img\icon\Tick.png" />
+    <Content Include="AdminPanale\assets\img\icon\top-tray-b.png" />
+    <Content Include="AdminPanale\assets\img\icon\top-tray-bx2.png" />
+    <Content Include="AdminPanale\assets\img\icon\top-tray.png" />
+    <Content Include="AdminPanale\assets\img\icon\top-trayx2.png" />
+    <Content Include="AdminPanale\assets\img\invoicelogo.png" />
+    <Content Include="AdminPanale\assets\img\invoicelogo2x.png" />
+    <Content Include="AdminPanale\assets\img\logo-b.png" />
+    <Content Include="AdminPanale\assets\img\logo-b2x.png" />
+    <Content Include="AdminPanale\assets\img\logo.png" />
+    <Content Include="AdminPanale\assets\img\logo2x.png" />
+    <Content Include="AdminPanale\assets\img\notification-alert.png" />
+    <Content Include="AdminPanale\assets\img\others\1.jpg" />
+    <Content Include="AdminPanale\assets\img\others\1.png" />
+    <Content Include="AdminPanale\assets\img\others\10.png" />
+    <Content Include="AdminPanale\assets\img\others\11.png" />
+    <Content Include="AdminPanale\assets\img\others\2.jpg" />
+    <Content Include="AdminPanale\assets\img\others\2.png" />
+    <Content Include="AdminPanale\assets\img\others\3.png" />
+    <Content Include="AdminPanale\assets\img\others\4.png" />
+    <Content Include="AdminPanale\assets\img\others\8.png" />
+    <Content Include="AdminPanale\assets\img\others\9.jpg" />
+    <Content Include="AdminPanale\assets\img\others\acadia.jpg" />
+    <Content Include="AdminPanale\assets\img\others\arches.jpg" />
+    <Content Include="AdminPanale\assets\img\others\blue.png" />
+    <Content Include="AdminPanale\assets\img\others\cover.jpg" />
+    <Content Include="AdminPanale\assets\img\others\crater.jpg" />
+    <Content Include="AdminPanale\assets\img\others\denali.jpg" />
+    <Content Include="AdminPanale\assets\img\others\glacier.jpg" />
+    <Content Include="AdminPanale\assets\img\others\grand.jpg" />
+    <Content Include="AdminPanale\assets\img\others\great.jpg" />
+    <Content Include="AdminPanale\assets\img\others\green.png" />
+    <Content Include="AdminPanale\assets\img\others\haleakala.jpg" />
+    <Content Include="AdminPanale\assets\img\others\rob.jpg" />
+    <Content Include="AdminPanale\assets\img\others\yellowstone.jpg" />
+    <Content Include="AdminPanale\assets\img\others\zion.jpg" />
+    <Content Include="AdminPanale\assets\img\profile-pic-big.png" />
+    <Content Include="AdminPanale\assets\img\profile-pic.png" />
+    <Content Include="AdminPanale\assets\img\profiles\1.png" />
+    <Content Include="AdminPanale\assets\img\profiles\2.png" />
+    <Content Include="AdminPanale\assets\img\profiles\3.png" />
+    <Content Include="AdminPanale\assets\img\profiles\a.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\a2x.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\avatar.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\avatar2x.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\avatar_small.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\avatar_small2x.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\b.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\b2x.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\ba.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\ba2x.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\bb.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\bb2x.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\bc.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\bc2x.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\bd.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\bd2x.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\be.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\be2x.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\c.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\c2x.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\d.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\d2x.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\e.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\e2x.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\f.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\f2x.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\h.jpg" />
+    <Content Include="AdminPanale\assets\img\profiles\h2x.jpg" />
+    <Content Include="AdminPanale\assets\img\pullup.png" />
+    <Content Include="AdminPanale\assets\img\pullup2x.png" />
+    <Content Include="AdminPanale\assets\img\sidebar-menu-arrow.png" />
+    <Content Include="AdminPanale\assets\img\small-profile-pic.png" />
+    <Content Include="AdminPanale\assets\img\wea.jpg" />
+    <Content Include="AdminPanale\assets\img\widget-arrow-blue.png" />
+    <Content Include="AdminPanale\assets\img\widget-arrow-green.png" />
+    <Content Include="AdminPanale\assets\img\widget-arrow-orange.png" />
+    <Content Include="AdminPanale\assets\img\work.jpg" />
+    <Content Include="AdminPanale\assets\js\calender.js" />
+    <Content Include="AdminPanale\assets\js\charts.js" />
+    <Content Include="AdminPanale\assets\js\chat.js" />
+    <Content Include="AdminPanale\assets\js\core.js" />
+    <Content Include="AdminPanale\assets\js\dashboard.js" />
+    <Content Include="AdminPanale\assets\js\dashboard_v2.js" />
+    <Content Include="AdminPanale\assets\js\datatables.js" />
+    <Content Include="AdminPanale\assets\js\datatable_boostrap_extend.js" />
+    <Content Include="AdminPanale\assets\js\demo.js" />
+    <Content Include="AdminPanale\assets\js\email_comman.js" />
+    <Content Include="AdminPanale\assets\js\form_elements.js" />
+    <Content Include="AdminPanale\assets\js\form_validations.js" />
+    <Content Include="AdminPanale\assets\js\google_maps.js" />
+    <Content Include="AdminPanale\assets\js\group_list.js" />
+    <Content Include="AdminPanale\assets\js\icon.js" />
+    <Content Include="AdminPanale\assets\js\login.js" />
+    <Content Include="AdminPanale\assets\js\login_v2.js" />
+    <Content Include="AdminPanale\assets\js\messages_notifications.js" />
+    <Content Include="AdminPanale\assets\js\notifications.js" />
+    <Content Include="AdminPanale\assets\js\search_results.js" />
+    <Content Include="AdminPanale\assets\js\support_ticket.js" />
+    <Content Include="AdminPanale\assets\js\tabs_accordian.js" />
+    <Content Include="AdminPanale\assets\js\theme-vars.js" />
+    <Content Include="AdminPanale\assets\js\vector_maps.js" />
+    <Content Include="AdminPanale\assets\js\widgets.js" />
+    <Content Include="AdminPanale\assets\plugins\boostrap-checkbox\css\bootstrap-checkbox.css" />
+    <Content Include="AdminPanale\assets\plugins\boostrap-checkbox\css\bootstrap-checkbox.min.css" />
+    <Content Include="AdminPanale\assets\plugins\boostrap-checkbox\img\Tick.png" />
+    <Content Include="AdminPanale\assets\plugins\boostrap-checkbox\js\bootstrap-checkbox.js" />
+    <Content Include="AdminPanale\assets\plugins\boostrap-checkbox\js\bootstrap-checkbox.min.js" />
+    <Content Include="AdminPanale\assets\plugins\boostrap-form-wizard\js\jquery.bootstrap.wizard.min.js" />
+    <Content Include="AdminPanale\assets\plugins\boostrap-slider\css\slider.css" />
+    <Content Include="AdminPanale\assets\plugins\boostrap-slider\css\slider.min.css" />
+    <Content Include="AdminPanale\assets\plugins\boostrap-slider\js\bootstrap-slider.js" />
+    <Content Include="AdminPanale\assets\plugins\boostrap-slider\js\bootstrap-slider.min.js" />
+    <Content Include="AdminPanale\assets\plugins\boostrapv3\css\bootstrap-theme.css" />
+    <Content Include="AdminPanale\assets\plugins\boostrapv3\css\bootstrap-theme.min.css" />
+    <Content Include="AdminPanale\assets\plugins\boostrapv3\css\bootstrap.css" />
+    <Content Include="AdminPanale\assets\plugins\boostrapv3\css\bootstrap.min.css" />
+    <Content Include="AdminPanale\assets\plugins\boostrapv3\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="AdminPanale\assets\plugins\boostrapv3\js\bootstrap.js" />
+    <Content Include="AdminPanale\assets\plugins\boostrapv3\js\bootstrap.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.css" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.min.css" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-colorpicker\img\alpha.png" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-colorpicker\img\hue.png" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-colorpicker\img\saturation.png" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-colorpicker\js\bootstrap-colorpicker.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-colorpicker\js\bootstrap-colorpicker.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-colorpicker\js\commits.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-colorpicker\js\commits.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\css\datepicker.css" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\css\datepicker.min.css" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\bootstrap-datepicker.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.ar.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.da.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.de.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.el.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.es.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.et.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.he.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.id.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.is.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.it.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.ka.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.mk.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.nb.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.no.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.sq.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.th.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.uk.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2-spinner.gif" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2.css" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2.min.css" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2.png" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2x2.png" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_ar.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_ar.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_bg.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_bg.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_ca.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_ca.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_cs.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_cs.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_da.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_da.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_de.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_de.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_el.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_el.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_es.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_es.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_et.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_et.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_eu.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_eu.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_fa.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_fa.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_fi.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_fi.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_fr.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_fr.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_gl.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_gl.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_he.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_he.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_hr.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_hr.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_hu.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_hu.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_id.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_id.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_is.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_is.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_it.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_it.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_ja.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_ja.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_ko.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_ko.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_lt.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_lt.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_lv.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_lv.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_mk.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_mk.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_ms.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_ms.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_nl.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_nl.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_no.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_no.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_pl.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_pl.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_pt-BR.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_pt-BR.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_pt-PT.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_pt-PT.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_ro.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_ro.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_ru.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_ru.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_sk.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_sk.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_sv.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_sv.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_th.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_th.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_tr.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_tr.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_ua.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_ua.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_vi.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_vi.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_zh-CN.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_zh-CN.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_zh-TW.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-select2\select2_locale_zh-TW.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-tag\bootstrap-tagsinput.css" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-tag\bootstrap-tagsinput.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-tag\bootstrap-tagsinput.min.css" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-tag\bootstrap-tagsinput.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-timepicker\css\bootstrap-timepicker.css" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-timepicker\css\bootstrap-timepicker.min.css" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-timepicker\js\bootstrap-timepicker.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-timepicker\js\bootstrap-timepicker.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-wizard\jquery.bootstrap.wizard.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-wysihtml5\bootstrap-wysihtml5.css" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-wysihtml5\bootstrap-wysihtml5.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-wysihtml5\bootstrap-wysihtml5.min.css" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-wysihtml5\bootstrap-wysihtml5.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-wysihtml5\wysihtml5-0.3.0.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-wysihtml5\wysihtml5-0.3.0.min.js" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-wysihtml5\wysiwyg-color.css" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap-wysihtml5\wysiwyg-color.min.css" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="AdminPanale\assets\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="AdminPanale\assets\plugins\breakpoints.js" />
+    <Content Include="AdminPanale\assets\plugins\breakpoints.min.js" />
+    <Content Include="AdminPanale\assets\plugins\breakpoints\breakpoints.js" />
+    <Content Include="AdminPanale\assets\plugins\breakpoints\breakpoints.min.js" />
+    <Content Include="AdminPanale\assets\plugins\Chartjs\Chart.js" />
+    <Content Include="AdminPanale\assets\plugins\Chartjs\Chart.min.js" />
+    <Content Include="AdminPanale\assets\plugins\chosen-bootstrap\chosen\chosen-sprite.png" />
+    <Content Include="AdminPanale\assets\plugins\chosen-bootstrap\chosen\chosen.css" />
+    <Content Include="AdminPanale\assets\plugins\chosen-bootstrap\chosen\chosen.jquery.min.js" />
+    <Content Include="AdminPanale\assets\plugins\chosen-bootstrap\chosen\chosen.min.css" />
+    <Content Include="AdminPanale\assets\plugins\ckeditor\ckeditor.js" />
+    <Content Include="AdminPanale\assets\plugins\ckeditor\ckeditor.min.js" />
+    <Content Include="AdminPanale\assets\plugins\clockface\css\clockface.css" />
+    <Content Include="AdminPanale\assets\plugins\clockface\css\clockface.min.css" />
+    <Content Include="AdminPanale\assets\plugins\clockface\js\clockface.js" />
+    <Content Include="AdminPanale\assets\plugins\clockface\js\clockface.min.js" />
+    <Content Include="AdminPanale\assets\plugins\data-tables\DT_bootstrap.css" />
+    <Content Include="AdminPanale\assets\plugins\data-tables\DT_bootstrap.js" />
+    <Content Include="AdminPanale\assets\plugins\data-tables\DT_bootstrap.min.css" />
+    <Content Include="AdminPanale\assets\plugins\data-tables\DT_bootstrap.min.js" />
+    <Content Include="AdminPanale\assets\plugins\data-tables\images\sort_asc.png" />
+    <Content Include="AdminPanale\assets\plugins\data-tables\images\sort_both.png" />
+    <Content Include="AdminPanale\assets\plugins\data-tables\images\sort_desc.png" />
+    <Content Include="AdminPanale\assets\plugins\data-tables\jquery.dataTables.js" />
+    <Content Include="AdminPanale\assets\plugins\data-tables\jquery.dataTables.min.js" />
+    <Content Include="AdminPanale\assets\plugins\datatables-responsive\css\datatables.responsive.css" />
+    <Content Include="AdminPanale\assets\plugins\datatables-responsive\css\datatables.responsive.min.css" />
+    <Content Include="AdminPanale\assets\plugins\datatables-responsive\img\minus.png" />
+    <Content Include="AdminPanale\assets\plugins\datatables-responsive\img\plus.png" />
+    <Content Include="AdminPanale\assets\plugins\datatables-responsive\js\datatables.responsive.js" />
+    <Content Include="AdminPanale\assets\plugins\datatables-responsive\js\datatables.responsive.min.js" />
+    <Content Include="AdminPanale\assets\plugins\datatables-responsive\js\lodash.min.js" />
+    <Content Include="AdminPanale\assets\plugins\dropzone\css\basic.css" />
+    <Content Include="AdminPanale\assets\plugins\dropzone\css\basic.min.css" />
+    <Content Include="AdminPanale\assets\plugins\dropzone\css\dropzone.css" />
+    <Content Include="AdminPanale\assets\plugins\dropzone\css\dropzone.min.css" />
+    <Content Include="AdminPanale\assets\plugins\dropzone\dropzone-amd-module.js" />
+    <Content Include="AdminPanale\assets\plugins\dropzone\dropzone-amd-module.min.js" />
+    <Content Include="AdminPanale\assets\plugins\dropzone\dropzone.js" />
+    <Content Include="AdminPanale\assets\plugins\dropzone\dropzone.min.js" />
+    <Content Include="AdminPanale\assets\plugins\dropzone\images\spritemap%402x.png" />
+    <Content Include="AdminPanale\assets\plugins\dropzone\images\spritemap.png" />
+    <Content Include="AdminPanale\assets\plugins\fancybox\source\blank.gif" />
+    <Content Include="AdminPanale\assets\plugins\fancybox\source\fancybox_loading.gif" />
+    <Content Include="AdminPanale\assets\plugins\fancybox\source\fancybox_overlay.png" />
+    <Content Include="AdminPanale\assets\plugins\fancybox\source\fancybox_sprite.png" />
+    <Content Include="AdminPanale\assets\plugins\fancybox\source\jquery.fancybox.css" />
+    <Content Include="AdminPanale\assets\plugins\fancybox\source\jquery.fancybox.min.css" />
+    <Content Include="AdminPanale\assets\plugins\fancybox\source\jquery.fancybox.pack.js" />
+    <Content Include="AdminPanale\assets\plugins\fancybox\source\jquery.fancybox.pack.min.js" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\css\font-awesome.css" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\css\font-awesome.min.css" />
+    <Content Include="AdminPanale\assets\plugins\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="AdminPanale\assets\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="AdminPanale\assets\plugins\fullcalendar\fullcalendar.js" />
+    <Content Include="AdminPanale\assets\plugins\fullcalendar\fullcalendar.min.css" />
+    <Content Include="AdminPanale\assets\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="AdminPanale\assets\plugins\fullcalendar\fullcalendar.print.css" />
+    <Content Include="AdminPanale\assets\plugins\fullcalendar\fullcalendar.print.min.css" />
+    <Content Include="AdminPanale\assets\plugins\fullcalendar\gcal.js" />
+    <Content Include="AdminPanale\assets\plugins\fullcalendar\gcal.min.js" />
+    <Content Include="AdminPanale\assets\plugins\gmaps.js" />
+    <Content Include="AdminPanale\assets\plugins\gmaps.min.js" />
+    <Content Include="AdminPanale\assets\plugins\google_maps_api.js" />
+    <Content Include="AdminPanale\assets\plugins\google_maps_api.min.js" />
+    <Content Include="AdminPanale\assets\plugins\gritter\css\jquery.gritter.css" />
+    <Content Include="AdminPanale\assets\plugins\gritter\css\jquery.gritter.min.css" />
+    <Content Include="AdminPanale\assets\plugins\gritter\images\gritter-light.png" />
+    <Content Include="AdminPanale\assets\plugins\gritter\images\gritter.png" />
+    <Content Include="AdminPanale\assets\plugins\gritter\images\ie-spacer.gif" />
+    <Content Include="AdminPanale\assets\plugins\gritter\js\jquery.gritter.js" />
+    <Content Include="AdminPanale\assets\plugins\gritter\js\jquery.gritter.min.js" />
+    <Content Include="AdminPanale\assets\plugins\ios-switch\ios7-switch.css" />
+    <Content Include="AdminPanale\assets\plugins\ios-switch\ios7-switch.js" />
+    <Content Include="AdminPanale\assets\plugins\ios-switch\ios7-switch.min.css" />
+    <Content Include="AdminPanale\assets\plugins\ios-switch\ios7-switch.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-1.8.3.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-autonumeric\autoNumeric.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-autonumeric\autoNumeric.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-block-ui\jqueryblockui.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-block-ui\jqueryblockui.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-block-ui\jqueryblockui.txt" />
+    <Content Include="AdminPanale\assets\plugins\jquery-craftmap\css\default.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-craftmap\css\default.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-craftmap\css\demo.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-craftmap\css\demo.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-craftmap\dotted.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-craftmap\img\close.gif" />
+    <Content Include="AdminPanale\assets\plugins\jquery-craftmap\img\loader.gif" />
+    <Content Include="AdminPanale\assets\plugins\jquery-craftmap\img\mapMarker.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-craftmap\js\craftmap.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-craftmap\js\craftmap.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-craftmap\js\jquery.latest.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-craftmap\map.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-craftmap\world_map.html" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\css\demo_page.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\css\demo_page.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\css\demo_table.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\css\demo_table.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\css\demo_table_jui.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\css\demo_table_jui.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\css\jquery.dataTables.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\css\jquery.dataTables.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\css\jquery.dataTables_themeroller.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\css\jquery.dataTables_themeroller.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\css\TableTools.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\css\TableTools.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\css\TableTools_JUI.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\css\TableTools_JUI.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\images\background.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\images\collection.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\images\collection_hover.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\images\copy.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\images\copy_hover.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\images\csv.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\images\csv_hover.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\images\pdf.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\images\pdf_hover.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\images\print.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\images\print_hover.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\images\xls.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\images\xls_hover.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\js\dataTables.tableTools.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\js\ZeroClipboard.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\js\ZeroClipboard.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\swf\copy_csv_xls.swf" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\extra\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\images\back_disabled.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\images\back_enabled.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\images\back_enabled_hover.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\images\favicon.ico" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\images\forward_disabled.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\images\forward_enabled.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\images\forward_enabled_hover.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\images\sort_asc.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\images\sort_asc_disabled.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\images\sort_both.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\images\sort_desc.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\images\sort_desc_disabled.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\js\jquery.dataTables.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-datatable\js\jquery.dataTables.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-easy-pie-chart\js\angular.easypiechart.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-easy-pie-chart\js\easypiechart.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-easy-pie-chart\js\jquery.easy-pie-chart.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-easy-pie-chart\js\jquery.easy-pie-chart.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-easy-pie-chart\js\jquery.easypiechart.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-file-upload\css\jquery.fileupload-ui.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-file-upload\css\jquery.fileupload-ui.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-file-upload\img\loading.gif" />
+    <Content Include="AdminPanale\assets\plugins\jquery-file-upload\img\progressbar.gif" />
+    <Content Include="AdminPanale\assets\plugins\jquery-file-upload\js\jquery.fileupload-fp.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-file-upload\js\jquery.fileupload-fp.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-file-upload\js\jquery.fileupload-ui.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-file-upload\js\jquery.fileupload-ui.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-file-upload\js\jquery.fileupload.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-file-upload\js\jquery.fileupload.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-file-upload\js\jquery.iframe-transport.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-file-upload\js\jquery.iframe-transport.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-file-upload\js\vendor\canvas-to-blob.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-file-upload\js\vendor\jquery.ui.widget.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-file-upload\js\vendor\jquery.ui.widget.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-file-upload\js\vendor\load-image.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-file-upload\js\vendor\tmpl.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-fittext\jquery.fittext.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-fittext\jquery.fittext.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-flot\jquery.flot.animator.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-flot\jquery.flot.crosshair.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-flot\jquery.flot.crosshair.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-flot\jquery.flot.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-flot\jquery.flot.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-flot\jquery.flot.orderBars.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-flot\jquery.flot.orderBars.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-flot\jquery.flot.pie.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-flot\jquery.flot.pie.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-flot\jquery.flot.resize.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-flot\jquery.flot.resize.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-flot\jquery.flot.selection.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-flot\jquery.flot.stack.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-flot\jquery.flot.stack.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-flot\jquery.flot.time.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-glider\css\style.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-glider\css\style.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-glider\js\jquery.glide.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-glider\js\jquery.slides.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-gmap\gmaps.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-gmap\gmaps.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-harry-ploter\harry.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-harry-ploter\harry.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-harry-ploter\harry.timeline.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-harry-ploter\harry.timeline.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-inputmask\jquery.inputmask.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-isotope\isotope.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-isotope\isotope.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-isotope\jquery.isotope.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-jvectormap\css\jquery-jvectormap-1.2.2.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-jvectormap\css\jquery-jvectormap-1.2.2.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-jvectormap\js\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-jvectormap\js\jquery-jvectormap-map.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-jvectormap\js\jquery-jvectormap-map.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-jvectormap\js\jquery-jvectormap-us-aea-en.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-jvectormap\js\jquery-jvectormap-us-aea-en.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-jvectormap\js\jquery-jvectormap-us-lcc-en.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-jvectormap\js\jquery-jvectormap-us-lcc-en.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-jvectormap\js\jquery-jvectormap-us-merc-en.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-jvectormap\js\jquery-jvectormap-us-merc-en.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-jvectormap\js\jquery-jvectormap-us-mill-en.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-jvectormap\js\jquery-jvectormap-us-mill-en.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-jvectormap\js\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-jvectormap\js\jquery-jvectormap-world-mill-en.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-knob\js\jquery.knob.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-knob\js\jquery.knob.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-lazyload\jquery.lazyload.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-metrojs\images\1pixel.gif" />
+    <Content Include="AdminPanale\assets\plugins\jquery-metrojs\images\metroIcons.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-metrojs\images\metroIcons_light.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-metrojs\MetroJs.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-metrojs\MetroJs.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-metrojs\MetroJs.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-metrojs\MetroJs.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-mixitup\jquery.mixitup.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-morris-chart\css\morris.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-morris-chart\css\morris.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-morris-chart\js\morris.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-nestable\jquery.nestable.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-nestable\jquery.nestable.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-nestable\jquery.nestable.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-nestable\jquery.nestable.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-nicescroll\jquery.nicescroll.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-nicescroll\zoomico.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\css\location-sel.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\css\location-sel.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\css\messenger-spinner.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\css\messenger-spinner.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\css\messenger-theme-air.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\css\messenger-theme-air.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\css\messenger-theme-block.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\css\messenger-theme-block.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\css\messenger-theme-flat.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\css\messenger-theme-flat.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\css\messenger-theme-future.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\css\messenger-theme-future.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\css\messenger-theme-ice.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\css\messenger-theme-ice.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\css\messenger.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\css\messenger.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\js\demo\demo.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\js\demo\demo.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\js\demo\location-sel.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\js\demo\location-sel.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\js\demo\theme-sel.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\js\demo\theme-sel.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\js\messenger-theme-flat.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\js\messenger-theme-flat.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\js\messenger-theme-future.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\js\messenger-theme-future.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\js\messenger.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-notifications\js\messenger.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-numberAnimate\jquery.animateNumbers.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-numberAnimate\jquery.animateNumbers.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-polymaps\polymaps.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-polymaps\style.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-polymaps\style.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\css\detail.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\css\detail.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\css\graph.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\css\graph.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\css\legend.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\css\legend.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\css\rickshaw.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\css\rickshaw.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\d3.layout.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\d3.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\d3.v2.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\d3.v2.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\extensions.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\extensions.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\raphael-min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\raphael-min.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Class.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Class.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Color.Palette.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Color.Palette.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Compat.ClassList.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Compat.ClassList.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Fixtures.Color.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Fixtures.Color.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Fixtures.Number.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Fixtures.Number.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Fixtures.RandomData.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Fixtures.RandomData.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Fixtures.Time.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Fixtures.Time.Local.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Fixtures.Time.Local.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Fixtures.Time.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Ajax.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Ajax.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Annotate.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Annotate.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Axis.Time.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Axis.Time.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Axis.X.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Axis.X.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Axis.Y.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Axis.Y.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Axis.Y.Scaled.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Axis.Y.Scaled.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Behavior.Series.Highlight.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Behavior.Series.Highlight.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Behavior.Series.Order.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Behavior.Series.Order.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Behavior.Series.Toggle.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Behavior.Series.Toggle.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.HoverDetail.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.HoverDetail.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.JSONP.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.JSONP.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Legend.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Legend.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.RangeSlider.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.RangeSlider.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Renderer.Area.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Renderer.Area.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Renderer.Bar.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Renderer.Bar.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Renderer.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Renderer.Line.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Renderer.Line.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Renderer.LinePlot.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Renderer.LinePlot.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Renderer.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Renderer.Multi.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Renderer.Multi.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Renderer.ScatterPlot.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Renderer.ScatterPlot.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Renderer.Stack.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Renderer.Stack.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Smoother.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Smoother.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Unstacker.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Graph.Unstacker.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\rickshaw.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Series.FixedDuration.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Series.FixedDuration.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Series.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ricksaw-chart\js\Rickshaw.Series.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-slider\css\jquery.sidr.dark.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-slider\css\jquery.sidr.dark.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-slider\css\jquery.sidr.light.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-slider\css\jquery.sidr.light.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-slider\jquery.sidr.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-sparkline\jquery-sparkline.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-sparkline\jquery-sparkline.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\css\style.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\css\style.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\close.gif" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\logo.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-1.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-10.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-11.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-12.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-13.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-14.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-15.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-16.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-17.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-18.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-19.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-2.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-20.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-21.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-22.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-23.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-24.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-3.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-4.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-5.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-6.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-7.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-8.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-full-9.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-1.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-10.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-11.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-12.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-13.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-14.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-15.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-16.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-17.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-18.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-19.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-2.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-20.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-21.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-22.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-23.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-24.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-3.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-4.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-5.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-6.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-7.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-8.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\img\superbox\superbox-thumb-9.jpg" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\js\superbox.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-superbox\js\superbox.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-tags-input\jquery.tagsinput.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-tags-input\jquery.tagsinput.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-tags-input\jquery.tagsinput.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ui-touch\jquery.ui.touch-punch.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ui\images\animated-overlay.gif" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ui\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ui\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ui\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ui\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ui\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ui\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ui\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ui\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ui\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ui\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ui\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ui\jquery-ui-1.10.1.custom.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jquery-ui\jquery-ui-1.10.1.custom.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-unveil\jquery.unveil.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery-validation\js\jquery.validate.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery.blockui.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery.blockui.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery.cookie.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery.cookie.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jquery.nanoscroller.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jqvmap\jqvmap\data\jquery.vmap.sampledata.js" />
+    <Content Include="AdminPanale\assets\plugins\jqvmap\jqvmap\data\jquery.vmap.sampledata.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jqvmap\jqvmap\jquery.vmap.js" />
+    <Content Include="AdminPanale\assets\plugins\jqvmap\jqvmap\jquery.vmap.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jqvmap\jqvmap\jqvmap.css" />
+    <Content Include="AdminPanale\assets\plugins\jqvmap\jqvmap\jqvmap.min.css" />
+    <Content Include="AdminPanale\assets\plugins\jqvmap\jqvmap\maps\jquery.vmap.europe.js" />
+    <Content Include="AdminPanale\assets\plugins\jqvmap\jqvmap\maps\jquery.vmap.europe.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jqvmap\jqvmap\maps\jquery.vmap.germany.js" />
+    <Content Include="AdminPanale\assets\plugins\jqvmap\jqvmap\maps\jquery.vmap.germany.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jqvmap\jqvmap\maps\jquery.vmap.russia.js" />
+    <Content Include="AdminPanale\assets\plugins\jqvmap\jqvmap\maps\jquery.vmap.russia.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jqvmap\jqvmap\maps\jquery.vmap.usa.js" />
+    <Content Include="AdminPanale\assets\plugins\jqvmap\jqvmap\maps\jquery.vmap.usa.min.js" />
+    <Content Include="AdminPanale\assets\plugins\jqvmap\jqvmap\maps\jquery.vmap.world.js" />
+    <Content Include="AdminPanale\assets\plugins\jqvmap\jqvmap\maps\jquery.vmap.world.min.js" />
+    <Content Include="AdminPanale\assets\plugins\less.js" />
+    <Content Include="AdminPanale\assets\plugins\modernizr.js" />
+    <Content Include="AdminPanale\assets\plugins\modernizr.min.js" />
+    <Content Include="AdminPanale\assets\plugins\owl-carousel\AjaxLoader.gif" />
+    <Content Include="AdminPanale\assets\plugins\owl-carousel\grabbing.png" />
+    <Content Include="AdminPanale\assets\plugins\owl-carousel\owl.carousel.css" />
+    <Content Include="AdminPanale\assets\plugins\owl-carousel\owl.carousel.js" />
+    <Content Include="AdminPanale\assets\plugins\owl-carousel\owl.carousel.min.css" />
+    <Content Include="AdminPanale\assets\plugins\owl-carousel\owl.carousel.min.js" />
+    <Content Include="AdminPanale\assets\plugins\owl-carousel\owl.theme.css" />
+    <Content Include="AdminPanale\assets\plugins\owl-carousel\owl.theme.min.css" />
+    <Content Include="AdminPanale\assets\plugins\pace\pace-theme-flash.css" />
+    <Content Include="AdminPanale\assets\plugins\pace\pace-theme-flash.min.css" />
+    <Content Include="AdminPanale\assets\plugins\pace\pace.min.js" />
+    <Content Include="AdminPanale\assets\plugins\planetary\planetaryjs.min.js" />
+    <Content Include="AdminPanale\assets\plugins\respond.js" />
+    <Content Include="AdminPanale\assets\plugins\respond.min.js" />
+    <Content Include="AdminPanale\assets\plugins\select2\select2-spinner.gif" />
+    <Content Include="AdminPanale\assets\plugins\select2\select2.min.js" />
+    <Content Include="AdminPanale\assets\plugins\select2\select2.png" />
+    <Content Include="AdminPanale\assets\plugins\select2\select2x2.png" />
+    <Content Include="AdminPanale\assets\plugins\select2\select2_metro.css" />
+    <Content Include="AdminPanale\assets\plugins\select2\select2_metro.min.css" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\css\component.css" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\css\component.min.css" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\css\demo.css" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\css\demo.min.css" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\css\normalize.css" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\css\normalize.min.css" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\fonts\codropsicons\codropsicons.svg" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\fonts\codropsicons\license.txt" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\img\1.png" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\img\2.png" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\img\3.png" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\img\4.png" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\img\5.png" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\img\6.png" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\img\7.png" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\img\8.png" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\js\hovers.js" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\js\hovers.min.js" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\js\snap.svg-min.js" />
+    <Content Include="AdminPanale\assets\plugins\shape-hover\js\snap.svg-min.min.js" />
+    <Content Include="AdminPanale\assets\plugins\skycons\skycons.js" />
+    <Content Include="AdminPanale\assets\plugins\skycons\skycons.min.js" />
+    <Content Include="AdminPanale\assets\plugins\uniform\css\uniform.default.css" />
+    <Content Include="AdminPanale\assets\plugins\uniform\css\uniform.default.min.css" />
+    <Content Include="AdminPanale\assets\plugins\uniform\images\bg-input-focus.png" />
+    <Content Include="AdminPanale\assets\plugins\uniform\images\bg-input.png" />
+    <Content Include="AdminPanale\assets\plugins\uniform\images\sprite.png" />
+    <Content Include="AdminPanale\assets\plugins\uniform\jquery.uniform.min.js" />
+    <Content Include="AdminPanale\assets\plugins\wysi\css\wysi.css" />
+    <Content Include="AdminPanale\assets\plugins\wysi\css\wysi.min.css" />
+    <Content Include="AdminPanale\assets\plugins\wysi\js\bootstrap-wysiwyg.js" />
+    <Content Include="AdminPanale\assets\plugins\wysi\js\bootstrap-wysiwyg.min.js" />
+    <Content Include="AdminPanale\blank_template.html" />
+    <Content Include="AdminPanale\boxed_layout.html" />
+    <Content Include="AdminPanale\boxed_layout_v2.html" />
+    <Content Include="AdminPanale\buttons.html" />
+    <Content Include="AdminPanale\calender.html" />
+    <Content Include="AdminPanale\charts.html" />
+    <Content Include="AdminPanale\dashboard_v1.html" />
+    <Content Include="AdminPanale\datatables.html" />
+    <Content Include="AdminPanale\draft.html" />
+    <Content Include="AdminPanale\email.html" />
+    <Content Include="AdminPanale\extended_layout.html" />
+    <Content Include="AdminPanale\form_elements.html" />
+    <Content Include="AdminPanale\form_validations.html" />
+    <Content Include="AdminPanale\gallery.html" />
+    <Content Include="AdminPanale\google_map.html" />
+    <Content Include="AdminPanale\grids_draggable.html" />
+    <Content Include="AdminPanale\grids_simple.html" />
+    <Content Include="AdminPanale\group_list.html" />
+    <Content Include="AdminPanale\icons.html" />
+    <Content Include="AdminPanale\index_.html" />
+    <Content Include="AdminPanale\invoice.html" />
+    <Content Include="AdminPanale\layout_options.html" />
+    <Content Include="AdminPanale\lockscreen.html" />
+    <Content Include="AdminPanale\login.html" />
+    <Content Include="AdminPanale\login_v2.html" />
+    <Content Include="AdminPanale\media\swf\copy_csv_xls.swf" />
+    <Content Include="AdminPanale\media\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="AdminPanale\messages_notifications.html" />
+    <Content Include="AdminPanale\notifications.html" />
+    <Content Include="AdminPanale\RTL.html" />
+    <Content Include="AdminPanale\search_results.html" />
+    <Content Include="AdminPanale\send_email.html" />
+    <Content Include="AdminPanale\sent.html" />
+    <Content Include="AdminPanale\sliders.html" />
+    <Content Include="AdminPanale\support_ticket.html" />
+    <Content Include="AdminPanale\tables.html" />
+    <Content Include="AdminPanale\tabs_accordian.html" />
+    <Content Include="AdminPanale\theme_coporate.html" />
+    <Content Include="AdminPanale\theme_default.html" />
+    <Content Include="AdminPanale\theme_elegant.html" />
+    <Content Include="AdminPanale\theme_simple.html" />
+    <Content Include="AdminPanale\time_line.html" />
+    <Content Include="AdminPanale\trash.html" />
+    <Content Include="AdminPanale\typography.html" />
+    <Content Include="AdminPanale\user-profile.html" />
+    <Content Include="AdminPanale\vector_map.html" />
+    <Content Include="AdminPanale\widgets.html" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\normalize.css" />
+    <Content Include="css\style-responsive.css" />
+    <Content Include="css\style.css" />
+    <Content Include="fonts\fontawesome-webfontba72.svg" />
+    <Content Include="images\clients.jpg" />
+    <Content Include="images\clients\google.png" />
+    <Content Include="images\clients\magento.png" />
+    <Content Include="images\clients\mailchimp.png" />
+    <Content Include="images\clients\nexternal.png" />
+    <Content Include="images\clients\twitter.png" />
+    <Content Include="images\clients\wordpress.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\photo.jpg" />
+    <Content Include="images\portfolio\thumb1.jpg" />
+    <Content Include="images\portfolio\thumb10.jpg" />
+    <Content Include="images\portfolio\thumb11.jpg" />
+    <Content Include="images\portfolio\thumb12.jpg" />
+    <Content Include="images\portfolio\thumb2.jpg" />
+    <Content Include="images\portfolio\thumb3.jpg" />
+    <Content Include="images\portfolio\thumb4.jpg" />
+    <Content Include="images\portfolio\thumb5.jpg" />
+    <Content Include="images\portfolio\thumb6.jpg" />
+    <Content Include="images\portfolio\thumb7.jpg" />
+    <Content Include="images\portfolio\thumb8.jpg" />
+    <Content Include="images\portfolio\thumb9.jpg" />
+    <Content Include="images\signature.png" />
+    <Content Include="images\slide1.jpg" />
+    <Content Include="images\slide2.jpg" />
+    <Content Include="img\ico-114.png" />
+    <Content Include="img\ico-144.png" />
+    <Content Include="img\ico-16.ico" />
+    <Content Include="img\ico-57.png" />
+    <Content Include="img\ico-72.png" />
+    <Content Include="img\left-arrow.png" />
+    <Content Include="img\loader.gif" />
+    <Content Include="img\location-icon.png" />
+    <Content Include="img\overlay.png" />
+    <Content Include="img\preloader.gif" />
+    <Content Include="img\right-arrow.png" />
+    <Content Include="img\slider_controls.png" />
+    <Content Include="img\timeline-bg.jpg" />
+    <Content Include="index_.html" />
+    <Content Include="js\bootstrap-modal.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\easyPieChart.js" />
+    <Content Include="js\gmap-settings.js" />
+    <Content Include="js\jquery-1.10.2.min.js" />
+    <Content Include="js\jquery-countTo.js" />
+    <Content Include="js\jquery.appear.js" />
+    <Content Include="js\jquery.cycle.all.js" />
+    <Content Include="js\jquery.easing-1.3.pack.js" />
+    <Content Include="js\jquery.fitvids.js" />
+    <Content Include="js\jquery.flexslider.min.js" />
+    <Content Include="js\jquery.isotope.min.js" />
+    <Content Include="js\jquery.maximage.js" />
+    <Content Include="js\jquery.nicescroll.min.js" />
+    <Content Include="js\jquery.parallax-1.1.3.js" />
+    <Content Include="js\jquery.sticky.js" />
+    <Content Include="js\jquery.validate.min.js" />
+    <Content Include="js\modernizr.js" />
+    <Content Include="js\script.js" />
+    <Content Include="js\skrollr.js" />
+    <Content Include="js\smoothscroll.js" />
+    <Content Include="js\swiper.min.js" />
+    <Content Include="js\waypoints.min.js" />
+    <Content Include="ProjectDetails.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPanale\Accounts\LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\Accounts\LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\AboutMeList.aspx.cs">
+      <DependentUpon>AboutMeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\AboutMeList.aspx.designer.cs">
+      <DependentUpon>AboutMeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\AboutMeMaganagement.aspx.cs">
+      <DependentUpon>AboutMeMaganagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\AboutMeMaganagement.aspx.designer.cs">
+      <DependentUpon>AboutMeMaganagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ClientsList.aspx.cs">
+      <DependentUpon>ClientsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ClientsList.aspx.designer.cs">
+      <DependentUpon>ClientsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ClientsManagement.aspx.cs">
+      <DependentUpon>ClientsManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ClientsManagement.aspx.designer.cs">
+      <DependentUpon>ClientsManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ContactList.aspx.cs">
+      <DependentUpon>ContactList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ContactList.aspx.designer.cs">
+      <DependentUpon>ContactList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ContactManagement.aspx.cs">
+      <DependentUpon>ContactManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ContactManagement.aspx.designer.cs">
+      <DependentUpon>ContactManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\EducationList.aspx.cs">
+      <DependentUpon>EducationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\EducationList.aspx.designer.cs">
+      <DependentUpon>EducationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\EducationManagement.aspx.cs">
+      <DependentUpon>EducationManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\EducationManagement.aspx.designer.cs">
+      <DependentUpon>EducationManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\GeneralSkillsList.aspx.cs">
+      <DependentUpon>GeneralSkillsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\GeneralSkillsList.aspx.designer.cs">
+      <DependentUpon>GeneralSkillsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\GeneralSkillsManagement.aspx.cs">
+      <DependentUpon>GeneralSkillsManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\GeneralSkillsManagement.aspx.designer.cs">
+      <DependentUpon>GeneralSkillsManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ProcessList.aspx.cs">
+      <DependentUpon>ProcessList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ProcessList.aspx.designer.cs">
+      <DependentUpon>ProcessList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ProcessManagement.aspx.cs">
+      <DependentUpon>ProcessManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ProcessManagement.aspx.designer.cs">
+      <DependentUpon>ProcessManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ResumeList.aspx.cs">
+      <DependentUpon>ResumeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ResumeList.aspx.designer.cs">
+      <DependentUpon>ResumeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ResumeManagement.aspx.cs">
+      <DependentUpon>ResumeManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ResumeManagement.aspx.designer.cs">
+      <DependentUpon>ResumeManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\SocialLinksList.aspx.cs">
+      <DependentUpon>SocialLinksList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\SocialLinksList.aspx.designer.cs">
+      <DependentUpon>SocialLinksList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\SocialLinksManagement.aspx.cs">
+      <DependentUpon>SocialLinksManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\SocialLinksManagement.aspx.designer.cs">
+      <DependentUpon>SocialLinksManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\SoftwareSkillsList.aspx.cs">
+      <DependentUpon>SoftwareSkillsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\SoftwareSkillsList.aspx.designer.cs">
+      <DependentUpon>SoftwareSkillsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\SoftwareSkillsManagement.aspx.cs">
+      <DependentUpon>SoftwareSkillsManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\SoftwareSkillsManagement.aspx.designer.cs">
+      <DependentUpon>SoftwareSkillsManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\werksList.aspx.cs">
+      <DependentUpon>werksList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\werksList.aspx.designer.cs">
+      <DependentUpon>werksList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\WorksManagement.aspx.cs">
+      <DependentUpon>WorksManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\WorksManagement.aspx.designer.cs">
+      <DependentUpon>WorksManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\WorkTypeList.aspx.cs">
+      <DependentUpon>WorkTypeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\WorkTypeList.aspx.designer.cs">
+      <DependentUpon>WorkTypeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\WorkTypeManagement.aspx.cs">
+      <DependentUpon>WorkTypeManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\WorkTypeManagement.aspx.designer.cs">
+      <DependentUpon>WorkTypeManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MasterPages\Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MasterPages\Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MasterPages\Pages.Master.cs">
+      <DependentUpon>Pages.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MasterPages\Pages.Master.designer.cs">
+      <DependentUpon>Pages.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDetails.aspx.cs">
+      <DependentUpon>ProjectDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectDetails.aspx.designer.cs">
+      <DependentUpon>ProjectDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Files\Clients\" />
+    <Folder Include="Files\CV\" />
+    <Folder Include="Files\images\" />
+    <Folder Include="Files\portfolio\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BeshoyHindyIdentity.DAL\BeshoyHindyIdentity.DAL.csproj">
+      <Project>{c05de7ee-26d0-4f7a-87f6-b809cd9bf3ed}</Project>
+      <Name>BeshoyHindyIdentity.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4987</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4987/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
