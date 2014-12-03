@@ -1,0 +1,11 @@
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Release\BeshoyHindyIdentity.DAL.dll.config
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Release\BeshoyHindyIdentity.DAL.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Release\BeshoyHindyIdentity.DAL.pdb
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Release\EntityFramework.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Release\EntityFramework.SqlServer.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Release\Newtonsoft.Json.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Release\EntityFramework.xml
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Release\EntityFramework.SqlServer.xml
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\obj\Release\BeshoyHindyIdentity.DAL.csprojResolveAssemblyReference.cache
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\obj\Release\BeshoyHindyIdentity.DAL.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\obj\Release\BeshoyHindyIdentity.DAL.pdb

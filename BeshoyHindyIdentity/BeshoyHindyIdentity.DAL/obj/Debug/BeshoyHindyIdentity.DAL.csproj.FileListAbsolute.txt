@@ -9,3 +9,14 @@ D:\Web Projects\my Projects\Identity\new - 21-9-2014\BeshoyHindyIdentity\BeshoyH
 D:\Web Projects\my Projects\Identity\new - 21-9-2014\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Debug\Newtonsoft.Json.dll
 D:\Web Projects\my Projects\Identity\new - 21-9-2014\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Debug\EntityFramework.xml
 D:\Web Projects\my Projects\Identity\new - 21-9-2014\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Debug\BeshoyHindyIdentity.DAL.dll.config
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Debug\BeshoyHindyIdentity.DAL.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Debug\BeshoyHindyIdentity.DAL.pdb
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Debug\EntityFramework.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Debug\Newtonsoft.Json.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Debug\EntityFramework.xml
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\obj\Debug\BeshoyHindyIdentity.DAL.csprojResolveAssemblyReference.cache
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\obj\Debug\BeshoyHindyIdentity.DAL.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.DAL\obj\Debug\BeshoyHindyIdentity.DAL.pdb

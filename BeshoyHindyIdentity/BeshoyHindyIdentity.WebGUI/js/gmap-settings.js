@@ -1,5 +1,5 @@
 function initialize() {
-    var e = new google.maps.LatLng(23.73176, 90.4064);
+    var e = new google.maps.LatLng(30.0877972, 31.2031565);
     var t = [{
         featureType: "landscape", elementType: "geometry.fill",
         stylers: [{ color: "#474D5D" }]
@@ -61,7 +61,7 @@ function initialize() {
         mapTypeControlOptions: { mapTypeIds: [google.maps.MapTypeId.ROADMAP, "roadatlas"] }
     }; var r = new google.maps.Map(document.getElementById("map_canvas"), n);
     var i = new google.maps.Marker({ position: e, map: r, icon: "img/location-icon.png", title: "" });
-    var s = '<div style="max-width: 300px" id="content">' + '<div id="bodyContent">' + "<h4>Beshoy Hindy</h4>" + '<p style="font-size: 12px">12, Segun Bagicha, 10th floor, Dhaka, Bangladesh. Lorem ipsum dolor sit amet incididunt ut labore et dolore psum dolor magna aliqua.</p>' + "</div>" + "</div>";
+    var s = '<div style="max-width: 300px" id="content">' + '<div id="bodyContent">' + "<h4>Beshoy Hindy</h4>" + '<p style="font-size: 12px">this is my home </br> 11 Galal Mousa St., El-Monerah El-Gharbiah - Embabah , Cairo , Egypt.</p>' + "</div>" + "</div>";
     var o = new google.maps.InfoWindow({ content: s }); google.maps.event.addListener(i, "click", function () { o.open(r, i) });
     var u = { name: "US Road Atlas" };
     var a = new google.maps.StyledMapType(t, u); r.mapTypes.set("roadatlas", a);

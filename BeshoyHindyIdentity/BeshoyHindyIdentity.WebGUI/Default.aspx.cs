@@ -24,6 +24,7 @@ namespace WebGUI
             if (!IsPostBack)
             {
                 BindAboutMeSection();
+                BindServicesSection();
                 BindWorksSection();
                 BindSoftwareSkillesSection();
                 BindGeneralSkillesSection();
@@ -38,8 +39,9 @@ namespace WebGUI
 
         protected void contactForm_submit_Click(object sender, EventArgs e)
         {
-            lblAddress_ContactSection.Text = "sdfasdfasdfasd";
+            SendMail();
         }
+
         #endregion
         #region Methods
         private void BindAboutMeSection()
@@ -57,10 +59,19 @@ namespace WebGUI
             lblPhone.Text = _objAboutMe.Phone.ToString();
             lblQuote.Text = _objAboutMe.Quote.ToString();
             lblWebsite.Text = _objAboutMe.WebSiteUrl.ToString();
+            ancrReusmeURL.HRef = ConfigurationManager.AppSettings["Resume"].ToString() + _objAboutMe.ReusmeUrl.ToString();
             YearExperiance = _objAboutMe.ExperienceYears.ToString();
             ProjectsNumber = _objAboutMe.Projects.ToString();
             imgImageFile.ImageUrl = ConfigurationManager.AppSettings["Image"].ToString() + _objAboutMe.Image.ToString();
         }
+        private void BindServicesSection()
+        {
+            ServicesRepository _objServicesRepo = new ServicesRepository();
+
+            rptrServices.DataSource = _objServicesRepo.LoadByActiveState(true);
+            rptrServices.DataBind();
+        }
+
         private void BindWorksSection()
         {
             WorkTypeRepository _objWorkTypeRepo = new WorkTypeRepository();
@@ -206,8 +217,30 @@ namespace WebGUI
             #endregion
 
         }
+        private void SendMail()
+        {
+            string msg = "<table>";
+            msg += "<tr><td>Subject: </td><td>" + "Mail From 'Beshoy Hindy' Portfolio - 'My WebSite'" + "  </td></tr>";
+            msg += "<tr><td>Name: </td><td>" + txtName.Value.ToString() + "  </td></tr>";
+            msg += "<tr><td>Email: </td><td>" + txtEmail.Value.ToString() + "  </td></tr>";
+            msg += "<tr><td>Message: </td><td>" + txtMessage.Value.ToString() + "  </td></tr>";
+            msg += "</tabl>";
+            GeneralMethods.SendMessage("beshoy.hindy@gmail.com", "'Beshoy hindy' Website", "", "Mail From '" + txtName.Value.ToString() + " -'Beshoy hindy' Website", msg, "Beshoy Hindy - WebSite");
+
+            //GeneralMethods.SendMessage("info@gmobileeg.com", "From GMobileWebsite", "", "Gmobile", msg, "");
+            //string returntype= GeneralMethods.SendMessage("vfaltas@bebrand.tv", "From GMobileWebsite", "", "Gmobile", msg, "");
+            Clear();
+
+        }
+
+        private void Clear()
+        {
+            txtName.Value =
+            txtEmail.Value =
+            txtMessage.Value =
+            String.Empty;
+        }
+
         #endregion
-
-
     }
 }

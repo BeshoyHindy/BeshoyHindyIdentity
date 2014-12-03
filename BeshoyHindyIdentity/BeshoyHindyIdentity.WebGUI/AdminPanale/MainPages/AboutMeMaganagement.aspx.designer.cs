@@ -85,6 +85,15 @@ namespace WebGUI.AdminPanale.MainPages {
         protected global::System.Web.UI.WebControls.TextBox txtWebSiteURL;
         
         /// <summary>
+        /// txtReusmeURL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtReusmeURL;
+        
+        /// <summary>
         /// imgImage control.
         /// </summary>
         /// <remarks>

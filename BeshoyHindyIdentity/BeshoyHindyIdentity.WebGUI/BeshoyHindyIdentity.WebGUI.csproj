@@ -204,6 +204,8 @@
     <Content Include="AdminPanale\MainPages\ProcessManagement.aspx" />
     <Content Include="AdminPanale\MainPages\ResumeList.aspx" />
     <Content Include="AdminPanale\MainPages\ResumeManagement.aspx" />
+    <Content Include="AdminPanale\MainPages\ServicesList.aspx" />
+    <Content Include="AdminPanale\MainPages\ServicesManagement.aspx" />
     <Content Include="AdminPanale\MainPages\SocialLinksList.aspx" />
     <Content Include="AdminPanale\MainPages\SocialLinksManagement.aspx" />
     <Content Include="AdminPanale\MainPages\SoftwareSkillsList.aspx" />
@@ -217,6 +219,8 @@
     <Content Include="AdminPanale\MainPages\Web.config" />
     <Content Include="AdminPanale\assets\Web.config" />
     <Content Include="AdminPanale\media\Web.config" />
+    <Content Include="Files\map.txt" />
+    <Content Include="Files\Resume\Beshoy_Hindy_.NET_Developer.pdf" />
     <None Include="fonts\fontawesome-webfont.eot_" />
     <None Include="fonts\fontawesome-webfont.eot" />
     <Content Include="Default.aspx" />
@@ -226,7 +230,17 @@
     <Content Include="AdminPanale\Accounts\web.config" />
     <Content Include="AdminPanale\MasterPages\Home.Master" />
     <Content Include="AdminPanale\MasterPages\Pages.Master" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\slide4.jpg" />
+    <Content Include="images\slide3.jpg" />
+    <Content Include="images\slide5.jpg" />
+    <Content Include="img\ico-114.png" />
+    <Content Include="img\ico-144.png" />
+    <Content Include="img\ico-16.png" />
+    <Content Include="img\ico-57.png" />
+    <Content Include="img\ico-72.png" />
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\Beshoy HIndy Identity.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -463,8 +477,6 @@
     <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.pt.min.js" />
     <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.ro.js" />
     <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.ro.min.js" />
-    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.rs-latin.js" />
-    <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.rs-latin.min.js" />
     <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.rs.js" />
     <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.rs.min.js" />
     <Content Include="AdminPanale\assets\plugins\bootstrap-datepicker\js\locales\bootstrap-datepicker.ru.js" />
@@ -1171,7 +1183,7 @@
     <Content Include="images\clients\nexternal.png" />
     <Content Include="images\clients\twitter.png" />
     <Content Include="images\clients\wordpress.png" />
-    <Content Include="images\logo.png" />
+    <Content Include="images\logo_.png" />
     <Content Include="images\photo.jpg" />
     <Content Include="images\portfolio\thumb1.jpg" />
     <Content Include="images\portfolio\thumb10.jpg" />
@@ -1188,11 +1200,11 @@
     <Content Include="images\signature.png" />
     <Content Include="images\slide1.jpg" />
     <Content Include="images\slide2.jpg" />
-    <Content Include="img\ico-114.png" />
-    <Content Include="img\ico-144.png" />
-    <Content Include="img\ico-16.ico" />
-    <Content Include="img\ico-57.png" />
-    <Content Include="img\ico-72.png" />
+    <Content Include="img\ico-114_.png" />
+    <Content Include="img\ico-144_.png" />
+    <Content Include="img\ico-16_.ico" />
+    <Content Include="img\ico-57_.png" />
+    <Content Include="img\ico-72_.png" />
     <Content Include="img\left-arrow.png" />
     <Content Include="img\loader.gif" />
     <Content Include="img\location-icon.png" />
@@ -1225,7 +1237,8 @@
     <Content Include="js\smoothscroll.js" />
     <Content Include="js\swiper.min.js" />
     <Content Include="js\waypoints.min.js" />
-    <Content Include="ProjectDetails.aspx" />
+    <Content Include="Projects\project-single.html" />
+    <Content Include="Projects\ProjectDetails.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1341,6 +1354,20 @@
     <Compile Include="AdminPanale\MainPages\ResumeManagement.aspx.designer.cs">
       <DependentUpon>ResumeManagement.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminPanale\MainPages\ServicesList.aspx.cs">
+      <DependentUpon>ServicesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ServicesList.aspx.designer.cs">
+      <DependentUpon>ServicesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ServicesManagement.aspx.cs">
+      <DependentUpon>ServicesManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanale\MainPages\ServicesManagement.aspx.designer.cs">
+      <DependentUpon>ServicesManagement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPanale\MainPages\SocialLinksList.aspx.cs">
       <DependentUpon>SocialLinksList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1418,11 +1445,11 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ProjectDetails.aspx.cs">
+    <Compile Include="Projects\ProjectDetails.aspx.cs">
       <DependentUpon>ProjectDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ProjectDetails.aspx.designer.cs">
+    <Compile Include="Projects\ProjectDetails.aspx.designer.cs">
       <DependentUpon>ProjectDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1430,7 +1457,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Files\Clients\" />
-    <Folder Include="Files\CV\" />
     <Folder Include="Files\images\" />
     <Folder Include="Files\portfolio\" />
     <Folder Include="Models\" />

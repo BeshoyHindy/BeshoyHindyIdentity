@@ -165,7 +165,7 @@ namespace DAL.Repositories
         }
         public AboutMe LoadByAboutMe(Boolean ActiveStatePram = true)
         {
-            _Obj = db.AboutMes.FirstOrDefault(usr => usr.Active == ActiveStatePram);
+            _Obj = db.AboutMes.OrderBy(ordr => ordr.RecOrder).FirstOrDefault(itm => itm.Active == ActiveStatePram);
             return _Obj;
         }
 

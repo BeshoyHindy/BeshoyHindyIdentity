@@ -70,7 +70,7 @@
     <Compile Include="Repositories\ResumeRepository.cs" />
     <Compile Include="Repositories\SocialLinkRepository.cs" />
     <Compile Include="Repositories\SoftwareSkillRepository.cs" />
-    <Compile Include="Repositories\TechnologyRepository.cs" />
+    <Compile Include="Repositories\ServicesRepository.cs" />
     <Compile Include="Repositories\WorkImageRepository.cs" />
     <Compile Include="Repositories\WorkRepository.cs" />
     <Compile Include="Repositories\WorkTypeRepository.cs" />

@@ -178,6 +178,7 @@ namespace DAL.Repositories
                          where wrk.Active == true && typ.Active == true
                          select new
                          {
+                             Id = wrk.Id,
                              Title = wrk.Title,
                              ProjectDate = wrk.ProjectDate,
                              Description = wrk.Description,
@@ -186,6 +187,7 @@ namespace DAL.Repositories
                              Url = wrk.Url,
                              WorkTypeId = wrk.WorkTypeId,
                              CreatedOn = wrk.CreatedOn,
+                             RecOrder = wrk.RecOrder,
                              Active = wrk.Active,
                              TypeName = typ.TypeName
                          });

@@ -74,7 +74,7 @@ namespace DAL.Extensions
         }
         public static string GetRecordInfo(string CreatedOn, string CreatedBy, string ModifiedOn, string ModifiedBy)
         {
-            AdminRepository  _ObjRepo = new AdminRepository();
+            AdminRepository _ObjRepo = new AdminRepository();
             Admin _ObjAdmin = new Admin();
 
             _ObjAdmin = _ObjRepo.LoadByAdminId(CreatedBy);
@@ -236,37 +236,77 @@ namespace DAL.Extensions
             }
             return Result;
         }
-        public static string SendMessage(string mailTo, string mailFromDisplayName, string mailCc, string subject, string body, string EmailSignature)
+
+        public static string SendMessage(string mailTo, string mailFromDisplayName, string mailCc, string subject, string body, string EmailSignature, string mailServer = "smtp.gmail.com", string MailPassword = "0120353466")
         {
             // try
             {
                 if (!string.IsNullOrEmpty(mailTo))
                 {
-                    string mailFrom = ConfigurationManager.AppSettings["Email"].ToString();
-                    SmtpClient client = new SmtpClient("relay-hosting.secureserver.net", 25);
-                    client.Credentials = CredentialCache.DefaultNetworkCredentials;
-                    /* client.Credentials = new NetworkCredential("vfaltas@bebrand.tv", "sempabebrand123", "smtpout.secureserver.net");
-                     client.Host = "smtpout.secureserver.net";
-                     client.Port = 25;*/
-                    client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                    client.EnableSsl = false;
-                    MailMessage mail = new MailMessage();
-                    mail.From = new MailAddress(mailFrom, mailFromDisplayName);
-                    mail.To.Add(mailTo);
-                    if (!string.IsNullOrEmpty(mailCc))
-                    {
-                        mail.CC.Add(mailCc);
-                    }
-                    mail.Subject = subject;
-                    mail.Body = "<table width=\"100%\"><tr><td align=\"left\" dir='ltr'><span style=\"font-size: 12pt;\">" + body + "</span></td></tr><tr><td align=\"center\">" + EmailSignature + "</td></tr></table>";
+                    MailMessage msg = new MailMessage();
+                    string mailFrom = ConfigurationManager.AppSettings["EmailFrom"].ToString();
 
-                    mail.IsBodyHtml = true;
-                    client.Send(mail);
+                    string mailto = mailTo;
+                    msg.To.Add(mailto);
+                    if (!string.IsNullOrEmpty(mailCc))
+                    { msg.CC.Add(mailCc); }
+                    msg.From = new MailAddress(mailFrom, mailFromDisplayName);
+                    msg.Subject = subject;
+                    msg.IsBodyHtml = true;
+                    msg.BodyEncoding = System.Text.Encoding.Unicode;
+
+                    msg.Body = "<table width=\"100%\"><tr><td align=\"left\" dir='ltr'><span style=\"font-size: 12pt;\">" + body + "</span></td></tr><tr><td align=\"center\">" + EmailSignature + "</td></tr></table>";
+
+                    SmtpClient client = new SmtpClient(mailServer, 587);
+                    client.EnableSsl = true;
+
+                    client.UseDefaultCredentials = false;
+
+                    client.Credentials = new System.Net.NetworkCredential(mailFrom, MailPassword);
+                    client.Send(msg);
                 }
                 return mailTo;
             }
             // catch { return ""; }
         }
+
+
+
+        //public static string SendMessage(string mailTo, string mailFromDisplayName, string mailCc, string subject, string body, string EmailSignature)
+        //{
+        //    // try
+        //    {
+        //        if (!string.IsNullOrEmpty(mailTo))
+        //        {
+        //            string mailFrom = ConfigurationManager.AppSettings["EmailFrom"].ToString();
+        //            //SmtpClient client = new SmtpClient("relay-hosting.secureserver.net", 25);
+        //            SmtpClient client = new SmtpClient();
+        //            client.Credentials = CredentialCache.DefaultNetworkCredentials;
+        //            client.Credentials = new NetworkCredential("beshoy.hindy@gmail.com", "bishos0120353466", "smtp.gmail.com");
+        //            client.Host = "smtp.gmail.com";
+        //            client.Port = 587;
+        //            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+        //            client.EnableSsl = false;
+        //            MailMessage mail = new MailMessage();
+        //            mail.From = new MailAddress(mailFrom, mailFromDisplayName);
+        //            mail.To.Add(mailTo);
+        //            if (!string.IsNullOrEmpty(mailCc))
+        //            {
+        //                mail.CC.Add(mailCc);
+        //            }
+        //            mail.Subject = subject;
+        //            mail.Body = "<table width=\"100%\"><tr><td align=\"left\" dir='ltr'><span style=\"font-size: 12pt;\">" + body + "</span></td></tr><tr><td align=\"center\">" + EmailSignature + "</td></tr></table>";
+
+        //            mail.IsBodyHtml = true;
+        //            client.Send(mail);
+        //        }
+        //        return mailTo;
+        //    }
+        //    // catch { return ""; }
+        //}
+
+
+
         public static string CreateRandomPassword(int PasswordLength)
         {
             string _allowedChars = "0123456789abcdefghijkmnopqrstuvwxyz";

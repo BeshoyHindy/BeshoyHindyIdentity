@@ -10,3 +10,15 @@ D:\Web Projects\my Projects\Identity\new - 21-9-2014\BeshoyHindyIdentity\BeshoyH
 D:\Web Projects\my Projects\Identity\new - 21-9-2014\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\EntityFramework.xml
 D:\Web Projects\my Projects\Identity\new - 21-9-2014\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\EntityFramework.SqlServer.dll
 D:\Web Projects\my Projects\Identity\new - 21-9-2014\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\EntityFramework.SqlServer.xml
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\BeshoyHindyIdentity.WebGUI.dll.config
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\BeshoyHindyIdentity.WebGUI.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\BeshoyHindyIdentity.WebGUI.pdb
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\BeshoyHindyIdentity.DAL.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\EntityFramework.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\EntityFramework.SqlServer.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\BeshoyHindyIdentity.DAL.pdb
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\EntityFramework.xml
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\EntityFramework.SqlServer.xml
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\obj\Debug\BeshoyHindyIdentity.WebGUI.csprojResolveAssemblyReference.cache
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\obj\Debug\BeshoyHindyIdentity.WebGUI.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\obj\Debug\BeshoyHindyIdentity.WebGUI.pdb

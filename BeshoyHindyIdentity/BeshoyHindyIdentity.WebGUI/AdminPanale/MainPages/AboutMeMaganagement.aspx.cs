@@ -75,6 +75,7 @@ namespace WebGUI.AdminPanale.MainPages
             _objRepository._Obj.Phone = txtPhone.Text;
             _objRepository._Obj.Email = txtEmail.Text;
             _objRepository._Obj.WebSiteUrl = txtWebSiteURL.Text;
+            _objRepository._Obj.ReusmeUrl = txtReusmeURL.Text;
             _objRepository._Obj.Address = txtAddress.Text;
             _objRepository._Obj.Quote = txtQuote.Text;
             _objRepository._Obj.IdentityDescription = txtIdentityDescription.Text;
@@ -109,6 +110,7 @@ namespace WebGUI.AdminPanale.MainPages
                 _objRepository._Obj.Phone = txtPhone.Text;
                 _objRepository._Obj.Email = txtEmail.Text;
                 _objRepository._Obj.WebSiteUrl = txtWebSiteURL.Text;
+                _objRepository._Obj.ReusmeUrl = txtReusmeURL.Text;
                 _objRepository._Obj.Address = txtAddress.Text;
                 _objRepository._Obj.Quote = txtQuote.Text;
                 _objRepository._Obj.IdentityDescription = txtIdentityDescription.Text;
@@ -175,6 +177,7 @@ namespace WebGUI.AdminPanale.MainPages
                     txtPhone.Text = AboutMeEnt.Phone;
                     txtEmail.Text = AboutMeEnt.Email;
                     txtWebSiteURL.Text = AboutMeEnt.WebSiteUrl;
+                    txtReusmeURL.Text = AboutMeEnt.ReusmeUrl;
                     txtAddress.Text = AboutMeEnt.Address;
                     txtQuote.Text = AboutMeEnt.Quote;
                     txtIdentityDescription.Text = AboutMeEnt.IdentityDescription;
@@ -203,6 +206,7 @@ namespace WebGUI.AdminPanale.MainPages
             txtPhone.Text =
             txtEmail.Text =
             txtWebSiteURL.Text =
+            txtReusmeURL.Text =
             txtAddress.Text =
             txtQuote.Text =
             txtIdentityDescription.Text =

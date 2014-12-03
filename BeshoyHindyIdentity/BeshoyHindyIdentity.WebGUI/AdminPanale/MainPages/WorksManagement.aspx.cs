@@ -98,7 +98,7 @@ namespace WebGUI.AdminPanale.MainPages
                 if (fpld.PostedFile.FileName != "")
                 {
                     FileName = Guid.NewGuid().ToString() + System.IO.Path.GetExtension(fpld.PostedFile.FileName);
-                    string PathUrl = Server.MapPath(ConfigurationManager.AppSettings["Poortfolio"].ToString()) + FileName;
+                    string PathUrl = Server.MapPath(ConfigurationManager.AppSettings["Portfolio"].ToString()) + FileName;
                     fpld.SaveAs(PathUrl);
                     // DAL.ImagesFact.ResizeWithCropResizeImage("", FileName, "Section");
                     _objRepository._Obj.IamgeFile = FileName;
@@ -107,7 +107,7 @@ namespace WebGUI.AdminPanale.MainPages
                 if (fpldThumb.PostedFile.FileName != "")
                 {
                     FileNameThumb = Guid.NewGuid().ToString() + System.IO.Path.GetExtension(fpldThumb.PostedFile.FileName);
-                    string PathUrl = Server.MapPath(ConfigurationManager.AppSettings["Poortfolio"].ToString()) + FileNameThumb;
+                    string PathUrl = Server.MapPath(ConfigurationManager.AppSettings["Portfolio"].ToString()) + FileNameThumb;
                     fpldThumb.SaveAs(PathUrl);
                     // DAL.ImagesFact.ResizeWithCropResizeImage("", FileName, "Section");
                     _objRepository._Obj.IamgeThumb = FileNameThumb;
@@ -129,7 +129,7 @@ namespace WebGUI.AdminPanale.MainPages
                 {
                     if (_objRepository._Obj.IamgeFile != null)
                     {
-                        DirectoryInfo di = new DirectoryInfo(Server.MapPath(ConfigurationManager.AppSettings["Poortfolio"]));
+                        DirectoryInfo di = new DirectoryInfo(Server.MapPath(ConfigurationManager.AppSettings["Portfolio"]));
                         foreach (FileInfo fi in di.GetFiles())
                         {
                             if (_objRepository._Obj.IamgeFile == fi.Name)
@@ -140,7 +140,7 @@ namespace WebGUI.AdminPanale.MainPages
                     }
 
                     FileName = Guid.NewGuid().ToString() + System.IO.Path.GetExtension(fpld.PostedFile.FileName);
-                    string PathUrl = Server.MapPath(ConfigurationManager.AppSettings["Poortfolio"].ToString()) + FileName;
+                    string PathUrl = Server.MapPath(ConfigurationManager.AppSettings["Portfolio"].ToString()) + FileName;
                     fpld.SaveAs(PathUrl);
                     // DAL.ImagesFact.ResizeWithCropResizeImage("", FileName, "Section");
                     _objRepository._Obj.IamgeFile = FileName;
@@ -150,7 +150,7 @@ namespace WebGUI.AdminPanale.MainPages
                 {
                     if (_objRepository._Obj.IamgeThumb != null)
                     {
-                        DirectoryInfo di = new DirectoryInfo(Server.MapPath(ConfigurationManager.AppSettings["Poortfolio"]));
+                        DirectoryInfo di = new DirectoryInfo(Server.MapPath(ConfigurationManager.AppSettings["Portfolio"]));
                         foreach (FileInfo fi in di.GetFiles())
                         {
                             if (_objRepository._Obj.IamgeThumb == fi.Name)
@@ -161,7 +161,7 @@ namespace WebGUI.AdminPanale.MainPages
                     }
 
                     FileNameThumb = Guid.NewGuid().ToString() + System.IO.Path.GetExtension(fpldThumb.PostedFile.FileName);
-                    string PathUrl = Server.MapPath(ConfigurationManager.AppSettings["Poortfolio"].ToString()) + FileNameThumb;
+                    string PathUrl = Server.MapPath(ConfigurationManager.AppSettings["Portfolio"].ToString()) + FileNameThumb;
                     fpldThumb.SaveAs(PathUrl);
                     // DAL.ImagesFact.ResizeWithCropResizeImage("", FileName, "Section");
                     _objRepository._Obj.IamgeThumb = FileNameThumb;
@@ -205,7 +205,7 @@ namespace WebGUI.AdminPanale.MainPages
 
                     if (!string.IsNullOrEmpty(WorkEnt.IamgeFile))
                     {
-                        imgImage.ImageUrl = ConfigurationManager.AppSettings["Poortfolio"].ToString() + WorkEnt.IamgeFile;
+                        imgImage.ImageUrl = ConfigurationManager.AppSettings["Portfolio"].ToString() + WorkEnt.IamgeFile;
                         imgImage.Visible = true;
                     }
                     else
@@ -215,7 +215,7 @@ namespace WebGUI.AdminPanale.MainPages
 
                     if (!string.IsNullOrEmpty(WorkEnt.IamgeThumb))
                     {
-                        imgImageThumb.ImageUrl = ConfigurationManager.AppSettings["Poortfolio"].ToString() + WorkEnt.IamgeThumb;
+                        imgImageThumb.ImageUrl = ConfigurationManager.AppSettings["Portfolio"].ToString() + WorkEnt.IamgeThumb;
                         imgImageThumb.Visible = true;
                     }
                     else

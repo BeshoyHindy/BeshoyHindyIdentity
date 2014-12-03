@@ -40,9 +40,9 @@ namespace DAL.DataModels
         IDbSet<GeneralSkill> GeneralSkills { get; set; } // GeneralSkills
         IDbSet<Process> Processes { get; set; } // Processes
         IDbSet<Resume> Resumes { get; set; } // Resumes
+        IDbSet<Service> Services { get; set; } // Services
         IDbSet<SocialLink> SocialLinks { get; set; } // SocialLinks
         IDbSet<SoftwareSkill> SoftwareSkills { get; set; } // SoftwareSkills
-        IDbSet<Technology> Technologies { get; set; } // Technologies
         IDbSet<Work> Works { get; set; } // Works
         IDbSet<WorkImage> WorkImages { get; set; } // WorkImages
         IDbSet<WorkType> WorkTypes { get; set; } // WorkTypes
@@ -62,9 +62,9 @@ namespace DAL.DataModels
         public IDbSet<GeneralSkill> GeneralSkills { get; set; } // GeneralSkills
         public IDbSet<Process> Processes { get; set; } // Processes
         public IDbSet<Resume> Resumes { get; set; } // Resumes
+        public IDbSet<Service> Services { get; set; } // Services
         public IDbSet<SocialLink> SocialLinks { get; set; } // SocialLinks
         public IDbSet<SoftwareSkill> SoftwareSkills { get; set; } // SoftwareSkills
-        public IDbSet<Technology> Technologies { get; set; } // Technologies
         public IDbSet<Work> Works { get; set; } // Works
         public IDbSet<WorkImage> WorkImages { get; set; } // WorkImages
         public IDbSet<WorkType> WorkTypes { get; set; } // WorkTypes
@@ -99,9 +99,9 @@ namespace DAL.DataModels
             modelBuilder.Configurations.Add(new GeneralSkillConfiguration());
             modelBuilder.Configurations.Add(new ProcessConfiguration());
             modelBuilder.Configurations.Add(new ResumeConfiguration());
+            modelBuilder.Configurations.Add(new ServiceConfiguration());
             modelBuilder.Configurations.Add(new SocialLinkConfiguration());
             modelBuilder.Configurations.Add(new SoftwareSkillConfiguration());
-            modelBuilder.Configurations.Add(new TechnologyConfiguration());
             modelBuilder.Configurations.Add(new WorkConfiguration());
             modelBuilder.Configurations.Add(new WorkImageConfiguration());
             modelBuilder.Configurations.Add(new WorkTypeConfiguration());
@@ -117,9 +117,9 @@ namespace DAL.DataModels
             modelBuilder.Configurations.Add(new GeneralSkillConfiguration(schema));
             modelBuilder.Configurations.Add(new ProcessConfiguration(schema));
             modelBuilder.Configurations.Add(new ResumeConfiguration(schema));
+            modelBuilder.Configurations.Add(new ServiceConfiguration(schema));
             modelBuilder.Configurations.Add(new SocialLinkConfiguration(schema));
             modelBuilder.Configurations.Add(new SoftwareSkillConfiguration(schema));
-            modelBuilder.Configurations.Add(new TechnologyConfiguration(schema));
             modelBuilder.Configurations.Add(new WorkConfiguration(schema));
             modelBuilder.Configurations.Add(new WorkImageConfiguration(schema));
             modelBuilder.Configurations.Add(new WorkTypeConfiguration(schema));
@@ -139,9 +139,9 @@ namespace DAL.DataModels
         public IDbSet<GeneralSkill> GeneralSkills { get; set; }
         public IDbSet<Process> Processes { get; set; }
         public IDbSet<Resume> Resumes { get; set; }
+        public IDbSet<Service> Services { get; set; }
         public IDbSet<SocialLink> SocialLinks { get; set; }
         public IDbSet<SoftwareSkill> SoftwareSkills { get; set; }
-        public IDbSet<Technology> Technologies { get; set; }
         public IDbSet<Work> Works { get; set; }
         public IDbSet<WorkImage> WorkImages { get; set; }
         public IDbSet<WorkType> WorkTypes { get; set; }
@@ -156,9 +156,9 @@ namespace DAL.DataModels
             GeneralSkills = new FakeDbSet<GeneralSkill>();
             Processes = new FakeDbSet<Process>();
             Resumes = new FakeDbSet<Resume>();
+            Services = new FakeDbSet<Service>();
             SocialLinks = new FakeDbSet<SocialLink>();
             SoftwareSkills = new FakeDbSet<SoftwareSkill>();
-            Technologies = new FakeDbSet<Technology>();
             Works = new FakeDbSet<Work>();
             WorkImages = new FakeDbSet<WorkImage>();
             WorkTypes = new FakeDbSet<WorkType>();
@@ -271,6 +271,7 @@ namespace DAL.DataModels
         public string Phone { get; set; } // Phone
         public string Email { get; set; } // Email
         public string WebSiteUrl { get; set; } // WebSiteURL
+        public string ReusmeUrl { get; set; } // ReusmeURL
         public string Image { get; set; } // Image
         public string Address { get; set; } // Address
         public string Quote { get; set; } // Quote
@@ -403,6 +404,21 @@ namespace DAL.DataModels
         public bool? Active { get; set; } // Active
     }
 
+    // Services
+    public class Service
+    {
+        public Guid Id { get; set; } // Id (Primary key)
+        public string Title { get; set; } // Title
+        public string Description { get; set; } // Description
+        public string Image { get; set; } // Image
+        public int? RecOrder { get; set; } // RecOrder
+        public DateTime? CreatedOn { get; set; } // CreatedOn
+        public Guid? CreatedBy { get; set; } // CreatedBy
+        public DateTime? ModifiedOn { get; set; } // ModifiedOn
+        public Guid? ModifiedBy { get; set; } // ModifiedBy
+        public bool? Active { get; set; } // Active
+    }
+
     // SocialLinks
     public class SocialLink
     {
@@ -425,21 +441,6 @@ namespace DAL.DataModels
         public string Title { get; set; } // Title
         public string Description { get; set; } // Description
         public int? Percentage { get; set; } // Percentage
-        public int? RecOrder { get; set; } // RecOrder
-        public DateTime? CreatedOn { get; set; } // CreatedOn
-        public Guid? CreatedBy { get; set; } // CreatedBy
-        public DateTime? ModifiedOn { get; set; } // ModifiedOn
-        public Guid? ModifiedBy { get; set; } // ModifiedBy
-        public bool? Active { get; set; } // Active
-    }
-
-    // Technologies
-    public class Technology
-    {
-        public Guid Id { get; set; } // Id (Primary key)
-        public string Title { get; set; } // Title
-        public string Description { get; set; } // Description
-        public string Image { get; set; } // Image
         public int? RecOrder { get; set; } // RecOrder
         public DateTime? CreatedOn { get; set; } // CreatedOn
         public Guid? CreatedBy { get; set; } // CreatedBy
@@ -518,6 +519,7 @@ namespace DAL.DataModels
             Property(x => x.Phone).HasColumnName("Phone").IsOptional().HasMaxLength(25);
             Property(x => x.Email).HasColumnName("Email").IsOptional().HasMaxLength(100);
             Property(x => x.WebSiteUrl).HasColumnName("WebSiteURL").IsOptional().HasMaxLength(150);
+            Property(x => x.ReusmeUrl).HasColumnName("ReusmeURL").IsOptional();
             Property(x => x.Image).HasColumnName("Image").IsOptional().HasMaxLength(250);
             Property(x => x.Address).HasColumnName("Address").IsOptional();
             Property(x => x.Quote).HasColumnName("Quote").IsOptional();
@@ -527,7 +529,7 @@ namespace DAL.DataModels
             Property(x => x.Projects).HasColumnName("Projects").IsOptional();
             Property(x => x.Certifications).HasColumnName("Certifications").IsOptional();
             Property(x => x.RecOrder).HasColumnName("RecOrder").IsOptional();
-            Property(x => x.CreatedOn).HasColumnName("RecOrder").IsOptional();
+            Property(x => x.CreatedOn).HasColumnName("CreatedOn").IsOptional();
             Property(x => x.CreatedBy).HasColumnName("CreatedBy").IsOptional();
             Property(x => x.ModifiedOn).HasColumnName("ModifiedOn").IsOptional();
             Property(x => x.ModifiedBy).HasColumnName("ModifiedBy").IsOptional();
@@ -549,7 +551,7 @@ namespace DAL.DataModels
             Property(x => x.Password).HasColumnName("Password").IsOptional().HasMaxLength(150);
             Property(x => x.Photo).HasColumnName("Photo").IsOptional();
             Property(x => x.RecOrder).HasColumnName("RecOrder").IsOptional();
-            Property(x => x.CreatedOn).HasColumnName("RecOrder").IsRequired();
+            Property(x => x.CreatedOn).HasColumnName("CreatedOn").IsRequired();
             Property(x => x.CreatedBy).HasColumnName("CreatedBy").IsRequired();
             Property(x => x.ModifiedOn).HasColumnName("ModifiedOn").IsRequired();
             Property(x => x.ModifiedBy).HasColumnName("ModifiedBy").IsRequired();
@@ -572,7 +574,7 @@ namespace DAL.DataModels
             Property(x => x.ClientMessage).HasColumnName("ClientMessage").IsOptional();
             Property(x => x.ClientUrl).HasColumnName("ClientURL").IsOptional().HasMaxLength(150);
             Property(x => x.RecOrder).HasColumnName("RecOrder").IsOptional();
-            Property(x => x.CreatedOn).HasColumnName("RecOrder").IsOptional();
+            Property(x => x.CreatedOn).HasColumnName("CreatedOn").IsOptional();
             Property(x => x.CreatedBy).HasColumnName("CreatedBy").IsOptional();
             Property(x => x.ModifiedOn).HasColumnName("ModifiedOn").IsOptional();
             Property(x => x.ModifiedBy).HasColumnName("ModifiedBy").IsOptional();
@@ -595,7 +597,7 @@ namespace DAL.DataModels
             Property(x => x.Phone).HasColumnName("Phone").IsOptional().HasMaxLength(25);
             Property(x => x.GoogleMap).HasColumnName("GoogleMap").IsOptional();
             Property(x => x.RecOrder).HasColumnName("RecOrder").IsOptional();
-            Property(x => x.CreatedOn).HasColumnName("RecOrder").IsOptional();
+            Property(x => x.CreatedOn).HasColumnName("CreatedOn").IsOptional();
             Property(x => x.CreatedBy).HasColumnName("CreatedBy").IsOptional();
             Property(x => x.ModifiedOn).HasColumnName("ModifiedOn").IsOptional();
             Property(x => x.ModifiedBy).HasColumnName("ModifiedBy").IsOptional();
@@ -618,7 +620,7 @@ namespace DAL.DataModels
             Property(x => x.DateFrom).HasColumnName("DateFrom").IsOptional().HasMaxLength(25);
             Property(x => x.DateTo).HasColumnName("DateTo").IsOptional().HasMaxLength(25);
             Property(x => x.RecOrder).HasColumnName("RecOrder").IsOptional();
-            Property(x => x.CreatedOn).HasColumnName("RecOrder").IsOptional();
+            Property(x => x.CreatedOn).HasColumnName("CreatedOn").IsOptional();
             Property(x => x.CreatedBy).HasColumnName("CreatedBy").IsOptional();
             Property(x => x.ModifiedOn).HasColumnName("ModifiedOn").IsOptional();
             Property(x => x.ModifiedBy).HasColumnName("ModifiedBy").IsOptional();
@@ -639,7 +641,7 @@ namespace DAL.DataModels
             Property(x => x.Description).HasColumnName("Description").IsOptional();
             Property(x => x.Percentage).HasColumnName("Percentage").IsOptional();
             Property(x => x.RecOrder).HasColumnName("RecOrder").IsOptional();
-            Property(x => x.CreatedOn).HasColumnName("RecOrder").IsOptional();
+            Property(x => x.CreatedOn).HasColumnName("CreatedOn").IsOptional();
             Property(x => x.CreatedBy).HasColumnName("CreatedBy").IsOptional();
             Property(x => x.ModifiedOn).HasColumnName("ModifiedOn").IsOptional();
             Property(x => x.ModifiedBy).HasColumnName("ModifiedBy").IsOptional();
@@ -661,7 +663,7 @@ namespace DAL.DataModels
             Property(x => x.Logo).HasColumnName("Logo").IsOptional();
             Property(x => x.Oreder).HasColumnName("Oreder").IsOptional();
             Property(x => x.RecOrder).HasColumnName("RecOrder").IsOptional();
-            Property(x => x.CreatedOn).HasColumnName("RecOrder").IsOptional();
+            Property(x => x.CreatedOn).HasColumnName("CreatedOn").IsOptional();
             Property(x => x.CreatedBy).HasColumnName("CreatedBy").IsOptional();
             Property(x => x.ModifiedOn).HasColumnName("ModifiedOn").IsOptional();
             Property(x => x.ModifiedBy).HasColumnName("ModifiedBy").IsOptional();
@@ -685,7 +687,28 @@ namespace DAL.DataModels
             Property(x => x.DateFrom).HasColumnName("DateFrom").IsOptional().HasMaxLength(25);
             Property(x => x.DateTo).HasColumnName("DateTo").IsOptional().HasMaxLength(25);
             Property(x => x.RecOrder).HasColumnName("RecOrder").IsOptional();
-            Property(x => x.CreatedOn).HasColumnName("RecOrder").IsOptional();
+            Property(x => x.CreatedOn).HasColumnName("CreatedOn").IsOptional();
+            Property(x => x.CreatedBy).HasColumnName("CreatedBy").IsOptional();
+            Property(x => x.ModifiedOn).HasColumnName("ModifiedOn").IsOptional();
+            Property(x => x.ModifiedBy).HasColumnName("ModifiedBy").IsOptional();
+            Property(x => x.Active).HasColumnName("Active").IsOptional();
+        }
+    }
+
+    // Services
+    internal class ServiceConfiguration : EntityTypeConfiguration<Service>
+    {
+        public ServiceConfiguration(string schema = "dbo")
+        {
+            ToTable(schema + ".Services");
+            HasKey(x => x.Id);
+
+            Property(x => x.Id).HasColumnName("Id").IsRequired();
+            Property(x => x.Title).HasColumnName("Title").IsOptional().HasMaxLength(50);
+            Property(x => x.Description).HasColumnName("Description").IsOptional();
+            Property(x => x.Image).HasColumnName("Image").IsOptional();
+            Property(x => x.RecOrder).HasColumnName("RecOrder").IsOptional();
+            Property(x => x.CreatedOn).HasColumnName("CreatedOn").IsOptional();
             Property(x => x.CreatedBy).HasColumnName("CreatedBy").IsOptional();
             Property(x => x.ModifiedOn).HasColumnName("ModifiedOn").IsOptional();
             Property(x => x.ModifiedBy).HasColumnName("ModifiedBy").IsOptional();
@@ -706,7 +729,7 @@ namespace DAL.DataModels
             Property(x => x.Logo).HasColumnName("Logo").IsOptional();
             Property(x => x.URl).HasColumnName("URl").IsOptional().HasMaxLength(250);
             Property(x => x.RecOrder).HasColumnName("RecOrder").IsOptional();
-            Property(x => x.CreatedOn).HasColumnName("RecOrder").IsOptional();
+            Property(x => x.CreatedOn).HasColumnName("CreatedOn").IsOptional();
             Property(x => x.CreatedBy).HasColumnName("CreatedBy").IsOptional();
             Property(x => x.ModifiedOn).HasColumnName("ModifiedOn").IsOptional();
             Property(x => x.ModifiedBy).HasColumnName("ModifiedBy").IsOptional();
@@ -727,28 +750,7 @@ namespace DAL.DataModels
             Property(x => x.Description).HasColumnName("Description").IsOptional();
             Property(x => x.Percentage).HasColumnName("Percentage").IsOptional();
             Property(x => x.RecOrder).HasColumnName("RecOrder").IsOptional();
-            Property(x => x.CreatedOn).HasColumnName("RecOrder").IsOptional();
-            Property(x => x.CreatedBy).HasColumnName("CreatedBy").IsOptional();
-            Property(x => x.ModifiedOn).HasColumnName("ModifiedOn").IsOptional();
-            Property(x => x.ModifiedBy).HasColumnName("ModifiedBy").IsOptional();
-            Property(x => x.Active).HasColumnName("Active").IsOptional();
-        }
-    }
-
-    // Technologies
-    internal class TechnologyConfiguration : EntityTypeConfiguration<Technology>
-    {
-        public TechnologyConfiguration(string schema = "dbo")
-        {
-            ToTable(schema + ".Technologies");
-            HasKey(x => x.Id);
-
-            Property(x => x.Id).HasColumnName("Id").IsRequired();
-            Property(x => x.Title).HasColumnName("Title").IsOptional().HasMaxLength(50);
-            Property(x => x.Description).HasColumnName("Description").IsOptional();
-            Property(x => x.Image).HasColumnName("Image").IsOptional();
-            Property(x => x.RecOrder).HasColumnName("RecOrder").IsOptional();
-            Property(x => x.CreatedOn).HasColumnName("RecOrder").IsOptional();
+            Property(x => x.CreatedOn).HasColumnName("CreatedOn").IsOptional();
             Property(x => x.CreatedBy).HasColumnName("CreatedBy").IsOptional();
             Property(x => x.ModifiedOn).HasColumnName("ModifiedOn").IsOptional();
             Property(x => x.ModifiedBy).HasColumnName("ModifiedBy").IsOptional();
@@ -773,7 +775,7 @@ namespace DAL.DataModels
             Property(x => x.IamgeFile).HasColumnName("IamgeFile").IsOptional();
             Property(x => x.Url).HasColumnName("URL").IsOptional().HasMaxLength(250);
             Property(x => x.RecOrder).HasColumnName("RecOrder").IsOptional();
-            Property(x => x.CreatedOn).HasColumnName("RecOrder").IsOptional();
+            Property(x => x.CreatedOn).HasColumnName("CreatedOn").IsOptional();
             Property(x => x.CreatedBy).HasColumnName("CreatedBy").IsOptional();
             Property(x => x.ModifiedOn).HasColumnName("ModifiedOn").IsOptional();
             Property(x => x.ModifiedBy).HasColumnName("ModifiedBy").IsOptional();
@@ -796,7 +798,7 @@ namespace DAL.DataModels
             Property(x => x.IamgeFile).HasColumnName("IamgeFile").IsOptional();
             Property(x => x.Url).HasColumnName("URL").IsOptional().HasMaxLength(250);
             Property(x => x.RecOrder).HasColumnName("RecOrder").IsOptional();
-            Property(x => x.CreatedOn).HasColumnName("RecOrder").IsRequired();
+            Property(x => x.CreatedOn).HasColumnName("CreatedOn").IsRequired();
             Property(x => x.CreatedBy).HasColumnName("CreatedBy").IsRequired();
             Property(x => x.ModifiedOn).HasColumnName("ModifiedOn").IsRequired();
             Property(x => x.ModifiedBy).HasColumnName("ModifiedBy").IsRequired();
@@ -817,7 +819,7 @@ namespace DAL.DataModels
             Property(x => x.ClassName).HasColumnName("ClassName").IsOptional().HasMaxLength(50);
             Property(x => x.Image).HasColumnName("Image").IsOptional();
             Property(x => x.RecOrder).HasColumnName("RecOrder").IsOptional();
-            Property(x => x.CreatedOn).HasColumnName("RecOrder").IsOptional();
+            Property(x => x.CreatedOn).HasColumnName("CreatedOn").IsOptional();
             Property(x => x.CreatedBy).HasColumnName("CreatedBy").IsOptional();
             Property(x => x.ModifiedOn).HasColumnName("ModifiedOn").IsOptional();
             Property(x => x.ModifiedBy).HasColumnName("ModifiedBy").IsOptional();

@@ -1,0 +1,12 @@
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\BeshoyHindyIdentity.WebGUI.dll.config
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\BeshoyHindyIdentity.WebGUI.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\BeshoyHindyIdentity.WebGUI.pdb
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\BeshoyHindyIdentity.DAL.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\EntityFramework.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\EntityFramework.SqlServer.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\BeshoyHindyIdentity.DAL.pdb
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\EntityFramework.xml
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\bin\EntityFramework.SqlServer.xml
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\obj\Release\BeshoyHindyIdentity.WebGUI.csprojResolveAssemblyReference.cache
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\obj\Release\BeshoyHindyIdentity.WebGUI.dll
+D:\Web Projects\My GitHub Account\My Repositories\BeshoyHindyIdentiy\BeshoyHindyIdentity\BeshoyHindyIdentity\BeshoyHindyIdentity.WebGUI\obj\Release\BeshoyHindyIdentity.WebGUI.pdb
